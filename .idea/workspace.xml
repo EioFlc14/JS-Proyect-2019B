@@ -2,13 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="b555e7f9-a544-4c77-9b1b-ab3cb61446dc" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/vcs.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/proyectoMovil/ionic.config.json" beforeDir="false" afterPath="$PROJECT_DIR$/proyectoMovil/ionic.config.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/proyectoMovil/src/app/app-routing.module.ts" beforeDir="false" afterPath="$PROJECT_DIR$/proyectoMovil/src/app/app-routing.module.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/proyectoMovil/src/app/app.module.ts" beforeDir="false" afterPath="$PROJECT_DIR$/proyectoMovil/src/app/app.module.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/proyectoMovil/src/app/home/home.page.html" beforeDir="false" afterPath="$PROJECT_DIR$/proyectoMovil/src/app/home/home.page.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/proyectoMovil/src/app/home/home.page.scss" beforeDir="false" afterPath="$PROJECT_DIR$/proyectoMovil/src/app/home/home.page.scss" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -48,12 +42,17 @@
       <option name="presentableId" value="Default" />
       <updated>1577304872334</updated>
       <workItem from="1577304874442" duration="547000" />
-      <workItem from="1578276230999" duration="416000" />
+      <workItem from="1578276230999" duration="1098000" />
     </task>
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
     <option name="version" value="1" />
+    <option name="exactExcludedFiles">
+      <list>
+        <option value="$PROJECT_DIR$/proyectWeb/node_modules/.staging/karma-134c0548/config.tpl.js" />
+      </list>
+    </option>
   </component>
   <component name="Vcs.Log.Tabs.Properties">
     <option name="TAB_STATES">
