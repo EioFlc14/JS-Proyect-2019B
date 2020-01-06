@@ -26,6 +26,11 @@ export class PrincipalPage implements OnInit {
     this.router.navigate(['searchudpatient']);
   }
 
+  goAddMedicalCheck() {
+    this.router.navigate(['addmedicalcheck']);
+  }
+
+
   ngOnInit() {
   }
 

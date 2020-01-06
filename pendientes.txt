@@ -11,6 +11,7 @@ PROYECTO MOVIL
 
 
 
-CONSIDERACIONES PARA LA BDD
+CONSIDERACIONES PARA CUANDO SE HAGA LA PARTE FUNCIONAL
 
 - al momento que se crea un paciente se debe dar la opción para registrar alergías y el record médico 
+- en el input del user code en la ventana de ADD MEDICAL CHECK 
