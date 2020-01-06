@@ -1,7 +1,15 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="b555e7f9-a544-4c77-9b1b-ab3cb61446dc" name="Default Changelist" comment="" />
+    <list default="true" id="b555e7f9-a544-4c77-9b1b-ab3cb61446dc" name="Default Changelist" comment="">
+      <change beforePath="$PROJECT_DIR$/.idea/vcs.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/proyectoMovil/ionic.config.json" beforeDir="false" afterPath="$PROJECT_DIR$/proyectoMovil/ionic.config.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/proyectoMovil/src/app/app-routing.module.ts" beforeDir="false" afterPath="$PROJECT_DIR$/proyectoMovil/src/app/app-routing.module.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/proyectoMovil/src/app/app.module.ts" beforeDir="false" afterPath="$PROJECT_DIR$/proyectoMovil/src/app/app.module.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/proyectoMovil/src/app/home/home.page.html" beforeDir="false" afterPath="$PROJECT_DIR$/proyectoMovil/src/app/home/home.page.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/proyectoMovil/src/app/home/home.page.scss" beforeDir="false" afterPath="$PROJECT_DIR$/proyectoMovil/src/app/home/home.page.scss" afterDir="false" />
+    </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -9,13 +17,13 @@
     <option name="LAST_RESOLUTION" value="IGNORE" />
   </component>
   <component name="Git.Settings">
-    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/proyecto_web" />
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
   <component name="ProjectId" id="1VUPo7lEOfyXqBuTwWFoDteLUl3" />
   <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
   <component name="PropertiesComponent">
     <property name="WebServerToolWindowFactoryState" value="false" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/proyecto_web" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
   </component>
   <component name="RunDashboard">
     <option name="ruleStates">
@@ -40,6 +48,7 @@
       <option name="presentableId" value="Default" />
       <updated>1577304872334</updated>
       <workItem from="1577304874442" duration="547000" />
+      <workItem from="1578276230999" duration="416000" />
     </task>
     <servers />
   </component>
@@ -51,7 +60,9 @@
       <map>
         <entry key="MAIN">
           <value>
-            <State />
+            <State>
+              <option name="COLUMN_ORDER" />
+            </State>
           </value>
         </entry>
       </map>

@@ -1,0 +1,28 @@
+ion-header.header {
+  background: #ecb5bf;
+}
+
+ion-toolbar.toolbar {
+  --background: #ecb5bf;
+  font-family: "Times New Roman";
+  text-align: center;
+  font-size: 35px;
+}
+
+ion-icon.icon_back {
+  font-size: 32px;
+  position: relative;
+  top: 11px;
+}
+
+ion-icon.icon_exit {
+  font-size: 32px;
+  position: relative;
+  top: 11px;
+  left: 10px
+}
+
+ion-button.updateButton {
+  --background: #ecb5bf;
+
+}
