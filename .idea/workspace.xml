@@ -2,7 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="b555e7f9-a544-4c77-9b1b-ab3cb61446dc" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/proyectWeb/ionic.config.json" beforeDir="false" afterPath="$PROJECT_DIR$/proyectWeb/ionic.config.json" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -42,7 +42,7 @@
       <option name="presentableId" value="Default" />
       <updated>1577304872334</updated>
       <workItem from="1577304874442" duration="547000" />
-      <workItem from="1578276230999" duration="1098000" />
+      <workItem from="1578276230999" duration="1314000" />
     </task>
     <servers />
   </component>
