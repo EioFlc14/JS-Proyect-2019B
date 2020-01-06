@@ -5,3 +5,12 @@ PROYECTO MOVIL
 - lanzar avisos de cantidad mínima o máxima de caracteres en la contraseña 
 - cambiar el color del boton 'sign in' de azul a salmon
 - crear la alerta al momento de salir de la aplicación
+- hacer que no sea scrolleable el boton de update y delete de la pagina SEARCHUDDOCTOR
+- inhabilitar los botones update y delete de la pagina SEARCHUDDOCTOR hasta que se seleccione un doctor si no no tiene sentido
+- Poner confirmaciones de las acciones realizadas como 'Doctor removed'
+
+
+
+CONSIDERACIONES PARA LA BDD
+
+- al momento que se crea un paciente se debe dar la opción para registrar alergías y el record médico 
