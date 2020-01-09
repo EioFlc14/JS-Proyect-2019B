@@ -1,11 +1,14 @@
-PROYECTO MOVIL
+GENERAL 
+	- Si es administrador solo podrá crear doctores, buscar y eliminar doctores y actualizar su foto.
+	- Si es doctor solo podrá crear citas médicas, buscar y eliminar sus citas médicas y actualizar su foto.
+	- Si es secretaria solo podrá crear pacientes   y actualizar su info.
+	- Si es paciente solo podrá ver sus citas médicas y actualizar su foto.
 
-- Poner la imagen (probablemente sea lo de que en lugar de localhost está otra dirección)
-- Cuando selecciono para ingresar la contraseña hacer que en lugar de azul se ponga en rosado
+- las credenciales iniciales serán la cédula y 1234ocualquiercosaenlacontraseña y de ahi cada usuario debe cambiarlas
+
+PROYECTO MOVIL
 - lanzar avisos de cantidad mínima o máxima de caracteres en la contraseña 
-- cambiar el color del boton 'sign in' de azul a salmon
-- crear la alerta al momento de salir de la aplicación
-- hacer que no sea scrolleable el boton de update y delete de la pagina SEARCHUDDOCTOR
+- crear la alerta al momento de salir de la aplicación(UNA FUNCION GLOBAL )
 - inhabilitar los botones update y delete de la pagina SEARCHUDDOCTOR hasta que se seleccione un doctor si no no tiene sentido
 - Poner confirmaciones de las acciones realizadas como 'Doctor removed'
 
