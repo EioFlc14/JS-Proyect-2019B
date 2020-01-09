@@ -2,20 +2,25 @@
     <ion-grid>
         <ion-row>
             <ion-col size="2">
-                <ion-icon class="icon_back" name="arrow-round-back" style="color: #1e2023"></ion-icon>
+                <ion-button class="backButton" (click)="goPrincipal()" >
+                    <ion-icon class="icon_back" name="arrow-round-back" style="color: #1e2023" size="large"></ion-icon>
+                </ion-button>
             </ion-col>
             <ion-col size="8">
                 <ion-toolbar class="toolbar"> EEUU HOSPITAL</ion-toolbar>
             </ion-col>
             <ion-col size="2">
-                <ion-icon class="icon_exit" name="exit" style="color: #1e2023"></ion-icon>
+                <ion-button class="exitButton" size="large">
+                    <ion-icon class="icon_exit" name="exit" style="color: #1e2023"></ion-icon>
+                </ion-button>
+
             </ion-col>
         </ion-row>
     </ion-grid>
 </ion-header>
 
 <div class="content_avatar">
-    <ion-item lines="none">
+    <ion-item>
         <ion-avatar slot="start">
             <img src="./src/assets/icon/fotoperfil.jpg">
         </ion-avatar>
@@ -25,12 +30,12 @@
             <p style="color:black;"> 1728 </p>
         </ion-label>
         <ion-button class="editButton" style="color: black; ">
-            <ion-icon name="create"> </ion-icon>
+            <ion-icon name="create"></ion-icon>
         </ion-button>
 
     </ion-item>
 </div>
-
+<br>
 <ion-label text-center> ADD DOCTOR</ion-label>
 
 <ion-content>
@@ -38,7 +43,7 @@
         <ion-row>
             <ion-col size="4.5">
                 <ion-item lines="none" text-justify>
-                    <ion-label >Doctor <br>
+                    <ion-label>Doctor <br>
                         Identificaction:
                     </ion-label>
                 </ion-item>
@@ -57,7 +62,8 @@
             <ion-col size="4.5">
                 <ion-item lines="none">
                     <ion-label>Doctor
-                        Name:</ion-label>
+                        Name:
+                    </ion-label>
                 </ion-item>
             </ion-col>
             <ion-col size="7.5">
@@ -74,7 +80,8 @@
             <ion-col size="4.5">
                 <ion-item lines="none">
                     <ion-label>Doctor <br>
-                        Lastname:</ion-label>
+                        Lastname:
+                    </ion-label>
                 </ion-item>
             </ion-col>
             <ion-col size="7.5">
@@ -91,15 +98,16 @@
             <ion-col size="4.5">
                 <ion-item lines="none">
                     <ion-label>Doctor <br>
-                        Speciality:</ion-label>
+                        Speciality:
+                    </ion-label>
                 </ion-item>
             </ion-col>
             <ion-col size="7.5">
                 <ion-item>
                     <ion-select>
-                        <ion-select-option> Cardiologist </ion-select-option>
-                        <ion-select-option> Pediatrician </ion-select-option>
-                        <ion-select-option> Orthopedic </ion-select-option>
+                        <ion-select-option> Cardiologist</ion-select-option>
+                        <ion-select-option> Pediatrician</ion-select-option>
+                        <ion-select-option> Orthopedic</ion-select-option>
                     </ion-select>
                 </ion-item>
             </ion-col>
@@ -109,7 +117,8 @@
             <ion-col size="4.5">
                 <ion-item lines="none">
                     <ion-label>Doctor <br>
-                        Birthdate:</ion-label>
+                        Birthdate:
+                    </ion-label>
                 </ion-item>
             </ion-col>
             <ion-col size="7.5">
@@ -121,7 +130,7 @@
 
     </ion-grid>
 
-    <ion-button class="addButton" expand="full" style="color: black; ">ADD </ion-button>
+    <ion-button class="addButton" expand="full" style="color: black; ">ADD</ion-button>
 
 </ion-content>
 

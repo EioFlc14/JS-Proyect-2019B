@@ -9,17 +9,15 @@ ion-toolbar.toolbar {
   font-size: 35px;
 }
 
-ion-icon.icon_back {
-  font-size: 32px;
+ion-button.exitButton {
+  --background: #ecb5bf;
+  height: 40px;
   position: relative;
-  top: 11px;
+  left: 165px;
 }
 
-ion-icon.icon_exit {
-  font-size: 32px;
-  position: relative;
-  top: 11px;
-  left: 10px
+ion-button.backButton {
+  --background: #ecb5bf;
 }
 
 ion-button.addButton {

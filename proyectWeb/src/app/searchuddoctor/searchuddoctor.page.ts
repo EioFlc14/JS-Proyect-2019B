@@ -14,6 +14,10 @@ export class SearchuddoctorPage implements OnInit {
               public toastController: ToastController
   ) { }
 
+  goPrincipal() {
+    this.router.navigate(['principal']);
+  }
+
   modificarEstaFuncion() {
     console.log('varios doctores');
   }

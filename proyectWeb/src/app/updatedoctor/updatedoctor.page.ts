@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import {Router} from '@angular/router';
 
 @Component({
   selector: 'app-updatedoctor',
@@ -7,7 +8,11 @@ import { Component, OnInit } from '@angular/core';
 })
 export class UpdatedoctorPage implements OnInit {
 
-  constructor() { }
+  goSearchDoctor() {
+    this.router.navigate(['searchuddoctor']);
+  }
+
+  constructor(private router: Router) { }
 
   ngOnInit() {
   }

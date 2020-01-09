@@ -2,6 +2,7 @@ import {Component, OnInit} from '@angular/core';
 import {FormControl} from '@angular/forms';
 import {Observable} from 'rxjs';
 import {map, startWith} from 'rxjs/operators';
+import {Router} from '@angular/router';
 
 @Component({
     selector: 'app-addmedicalcheck',
@@ -13,6 +14,10 @@ export class AddmedicalcheckPage implements OnInit {
     myControl = new FormControl();
     options: string[] = ['One', 'Two', 'Three'];
     filteredOptions: Observable<string[]>;
+
+    goPrincipal() {
+        this.router.navigate(['principal']);
+    }
 
     private _filter(value: string): string[] {
         const filterValue = value.toLowerCase();
@@ -27,7 +32,7 @@ export class AddmedicalcheckPage implements OnInit {
         );
     }
 
-    constructor() {
+    constructor(private router: Router) {
     }
 
 }

@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import {Router} from '@angular/router';
 
 @Component({
   selector: 'app-updatemedicalcheck',
@@ -7,7 +8,11 @@ import { Component, OnInit } from '@angular/core';
 })
 export class UpdatemedicalcheckPage implements OnInit {
 
-  constructor() { }
+  goSearchMedicalCheck() {
+    this.router.navigate(['searchudmedicalcheck']);
+  }
+
+  constructor(private router: Router) { }
 
   ngOnInit() {
   }

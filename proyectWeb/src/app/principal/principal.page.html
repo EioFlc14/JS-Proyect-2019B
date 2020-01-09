@@ -5,14 +5,17 @@
                 <ion-toolbar class="toolbar"> EEUU HOSPITAL</ion-toolbar>
             </ion-col>
             <ion-col size="2">
-                <ion-icon class="icon_exit" name="exit" style="color: #1e2023" ></ion-icon><!--AQUI DEBE IR LA FUNCION GLOBAL PARA CERRARTODO EN TODAS LAS VISTAS -->
+                <ion-button class="exitButton" size="large">
+                    <ion-icon class="icon_exit" name="exit" style="color: #1e2023"></ion-icon>
+                </ion-button>
+                <!--AQUI DEBE IR LA FUNCION GLOBAL PARA CERRARTODO EN TODAS LAS VISTAS -->
             </ion-col>
         </ion-row>
     </ion-grid>
 </ion-header>
 
 <div class="content_avatar">
-    <ion-item lines="none">
+    <ion-item >
         <ion-avatar slot="start">
             <img src="assets/cerveza.jpg">
         </ion-avatar>
@@ -22,12 +25,12 @@
             <p style="color:black;"> 1728 </p>
         </ion-label>
         <ion-button class="editButton" style="color: black; ">
-            <ion-icon name="create"> </ion-icon>
+            <ion-icon name="create"></ion-icon>
         </ion-button>
 
     </ion-item>
 </div>
-
+<br>
 <ion-content>
     <ion-list-header>DOCTOR</ion-list-header>
 
@@ -53,7 +56,7 @@
         <ion-label>Add Medical Check</ion-label>
     </ion-chip>
     <ion-chip outline color="danger" (click)="goSearchMedicalCheck()">
-        <ion-label>Search Medical Check  </ion-label>
+        <ion-label>Search Medical Check</ion-label>
     </ion-chip>
 
 

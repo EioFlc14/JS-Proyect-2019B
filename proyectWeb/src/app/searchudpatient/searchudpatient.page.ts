@@ -14,6 +14,10 @@ export class SearchudpatientPage implements OnInit {
               public toastController: ToastController
   ) { }
 
+  goPrincipal() {
+    this.router.navigate(['principal']);
+  }
+
   modificarEstaFuncion() {
     console.log('varios pacientes');
   }
