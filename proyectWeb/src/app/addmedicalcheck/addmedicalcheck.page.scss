@@ -1,0 +1,43 @@
+ion-header.header {
+  background: #ecb5bf;
+}
+
+ion-toolbar.toolbar {
+  --background: #ecb5bf;
+  font-family: "Times New Roman";
+  text-align: center;
+  font-size: 35px;
+}
+
+ion-icon.icon_back {
+  font-size: 32px;
+  position: relative;
+  top: 11px;
+}
+
+ion-icon.icon_exit {
+  font-size: 32px;
+  position: relative;
+  top: 11px;
+  left: 10px
+}
+
+ion-button.addButton {
+  --background: #ecb5bf;
+
+}
+
+ion-button.editButton {
+  --background: #ecb5bf;
+
+}
+
+.example-form {
+  min-width: 150px;
+  max-width: 500px;
+  width: 100%;
+}
+
+.example-full-width {
+  width: 100%;
+}

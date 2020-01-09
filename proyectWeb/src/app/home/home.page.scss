@@ -1,5 +1,58 @@
-ion-toolbar.toolbar1 {
+ion-toolbar.toolbar {
   --background: #ecb5bf;
   font-family: "Times New Roman";
   text-align: center;
+  font-size: 35px;
+}
+
+ion-img.hospital {
+  width: 1000px;
+  height: 1200px;
+}
+
+ion-icon.icon_user {
+  color: #ecb5bf;
+  font-size: 60px;
+}
+
+ion-icon.icon_pswd {
+  color: #ecb5bf;
+  font-size: 60px;
+}
+
+ion-button.button_signin {
+  color: black;
+  --background: #ecb5bf;
+
+}
+
+ion-item.item_line {
+  height: 50px;
+  position: relative;
+  top: 25px;
+
+}
+
+ion-row.row_3 {
+  height: 75px;
+}
+
+ion-icon.icon_fb {
+  font-size: 32px;
+  color: #ecb5bf;
+}
+
+ion-icon.icon_tw {
+  font-size: 32px;
+  color: #ecb5bf;
+}
+
+ion-icon.icon_in {
+  font-size: 32px;
+  color: #ecb5bf;
+}
+
+ion-icon.icon_yt {
+  font-size: 32px;
+  color: #ecb5bf;
 }
