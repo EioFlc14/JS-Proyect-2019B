@@ -11,7 +11,12 @@ PROYECTO MOVIL
 - crear la alerta al momento de salir de la aplicación(UNA FUNCION GLOBAL )
 - inhabilitar los botones update y delete de la pagina SEARCHUDDOCTOR hasta que se seleccione un doctor si no no tiene sentido
 - Poner confirmaciones de las acciones realizadas como 'Doctor removed'
+- Crear una vista para editar mi perfil
 
+
+PROYECTO WEB
+- Crear una vista para editar mi perfil
+- La pagina PRINCIPAL ver si se puede usar junto con angular material
 
 
 CONSIDERACIONES PARA CUANDO SE HAGA LA PARTE FUNCIONAL
