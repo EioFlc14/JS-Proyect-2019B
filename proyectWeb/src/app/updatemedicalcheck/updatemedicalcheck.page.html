@@ -38,6 +38,205 @@
 <ion-label text-center> UPDATE MEDICAL CHECK</ion-label>
 
 <ion-content>
+  <form (ngSubmit)="medicalCheck(mCheckForm)" #mCheckForm="ngForm">
+    <ion-grid>
+      <ion-row>
+        <ion-col size="4.5">
+          <ion-item lines="none" text-justify>
+            <ion-label> Code:
+            </ion-label>
+          </ion-item>
+        </ion-col>
+        <ion-col size="7.5">
+          <ion-item>
+            <ion-input type="text"
+                       name="code"
+                       required
+                       pattern="([0-9])+"
+                       placeholder="Ej: 14512"
+                       [(ngModel)]="check.code"
+                       #codeInput="ngModel">
+            </ion-input>
+          </ion-item>
+          <div *ngIf="codeInput.touched && codeInput.dirty">
+            <p *ngIf="codeInput.errors?.required " style="color: red">
+              This field is required.
+            </p>
+
+            <p *ngIf="codeInput.errors?.pattern" style="color: red">
+              Only-numbers Field.
+            </p>
+          </div>
+        </ion-col>
+      </ion-row>
+
+      <ion-row>
+        <ion-col size="4.5">
+          <ion-item lines="none" text-justify>
+            <ion-label> Patient Identification:
+            </ion-label>
+          </ion-item>
+        </ion-col>
+        <ion-col size="7.5">
+          <ion-item>
+            <ion-input type="text"
+                       name="id"
+                       pattern="([0-9])+"
+                       required
+                       [(ngModel)]="check.patientIdentification"
+                       placeholder="Ej: 1781818193"
+                       #identificationInput="ngModel">
+            </ion-input>
+          </ion-item>
+          <div *ngIf="identificationInput.touched && identificationInput.dirty">
+            <p *ngIf="identificationInput.errors?.required " style="color: red">
+              This field is required.
+            </p>
+
+            <p *ngIf="identificationInput.errors?.pattern" style="color: red">
+              Only-numbers Field.
+            </p>
+          </div>
+        </ion-col>
+      </ion-row>
+
+      <ion-row>
+        <ion-col size="4.5">
+          <ion-item lines="none">
+            <ion-label> Admit date:
+            </ion-label>
+          </ion-item>
+        </ion-col>
+        <ion-col size="7.5">
+          <ion-item>
+            <ion-datetime type="date"
+                          name="admit"
+                          required
+                          [(ngModel)]="check.admit"
+                          #admitInput="ngModel">
+            </ion-datetime>
+          </ion-item>
+          <div *ngIf="admitInput.touched && admitInput.dirty">
+            <p *ngIf="admitInput.errors?.required " style="color: red">
+              This field is required.
+            </p>
+
+          </div>
+        </ion-col>
+      </ion-row>
+
+      <ion-row>
+        <ion-col size="4.5">
+          <ion-item lines="none">
+            <ion-label> Discharge date:
+            </ion-label>
+          </ion-item>
+        </ion-col>
+        <ion-col size="7.5">
+          <ion-item>
+            <ion-datetime type="date"
+                          name="discharge"
+                          required
+                          [(ngModel)]="check.discharge"
+                          #dischargeInput="ngModel">
+            </ion-datetime>
+          </ion-item>
+
+        </ion-col>
+      </ion-row>
+
+      <ion-row>
+        <ion-col size="4.5">
+          <ion-item lines="none">
+            <ion-label> Blood pressure:
+            </ion-label>
+          </ion-item>
+        </ion-col>
+        <ion-col size="7.5">
+          <ion-label>
+            <script language="JavaScript">
+              const SerialPort = require('serialport');
+              let a = 0;
+              const mySerial = new SerialPort('COM4', {baudRate: 115200});
+              let pulso = 0;
+
+              mySerial.on('open', function () {
+                console.log('Opened Serial Port');
+              });
+
+              mySerial.on('data', function (data) {
+                pulso = Number(data.toString());
+
+                console.log(pulso);
+              });
+
+              mySerial.on('err', function (err) {
+                console.log(err.message);
+              });
+
+              console.log(a);
+
+            </script>
+          </ion-label>
+          <ion-button class="blood">
+
+          </ion-button>
+        </ion-col>
+      </ion-row>
+
+      <ion-row>
+        <ion-col size="4.5">
+          <ion-item lines="none">
+            <ion-label> Weight:
+            </ion-label>
+          </ion-item>
+        </ion-col>
+        <ion-col size="7.5">
+          <ion-item>
+            <ion-input type="number"
+                       name="weight"
+                       pattern="([0-9])+"
+                       placeholder="Ej: 130"
+                       required
+                       [(ngModel)]="check.weightP"
+                       #weightPInput="ngModel">
+            </ion-input>
+          </ion-item>
+          <div *ngIf="weightPInput.touched && weightPInput.dirty">
+            <p *ngIf="weightPInput.errors?.required " style="color: red">
+              This field is required.
+            </p>
+
+          </div>
+        </ion-col>
+      </ion-row>
+
+      <ion-row>
+        <ion-col size="12">
+          <ion-item>
+            <ion-label position="floating">Diagnosis</ion-label>
+            <ion-textarea type="text"
+                          name="diagnosis"
+                          maxlength="1000"
+                          [(ngModel)]="check.diagnosis"
+                          #diagnosisInput="ngModel">
+
+            </ion-textarea>
+          </ion-item>
+        </ion-col>
+      </ion-row>
+
+    </ion-grid>
+
+    <ion-button class="addButton"
+                expand="full"
+                style="color: black;"
+                [disabled]="!mCheckForm.valid" (click)="updateConfirm()">ADD
+    </ion-button>
+  </form>
+</ion-content>
+
+<!--<ion-content>
   <ion-grid>
     <ion-row>
       <ion-col size="4.5">
@@ -148,7 +347,7 @@
 
   <ion-button class="addButton" expand="full" style="color: black; ">UPDATE</ion-button>
 
-</ion-content>
+</ion-content>-->
 
 
 

@@ -6,6 +6,10 @@ GENERAL
 
 - las credenciales iniciales serán la cédula y 1234ocualquiercosaenlacontraseña y de ahi cada usuario debe cambiarlas
 
+- Dentro de ADDDOCTOR obtener el valor de la especialidad y validar que debe haberse seleccionado uno. DESCOMENTAR ESE CAMPO. HACER LO MISMO EN UPDATEDOCTOR
+- VALLIDAR EL PESO MAYOR QUE 0 CUANDO SE REGISTRA UN MEDICAL CHECK
+- VALIDAR QUE LAS FECHAS SEAN MAYORES Y OTROS MENORES (noción del tiempo)
+
 PROYECTO MOVIL
 - lanzar avisos de cantidad mínima o máxima de caracteres en la contraseña 
 - crear la alerta al momento de salir de la aplicación(UNA FUNCION GLOBAL )
@@ -15,9 +19,9 @@ PROYECTO MOVIL
 
 
 PROYECTO WEB
-- Crear una vista para editar mi perfil
+- Crear una vista para editar mi perfil  (esta que sea una modal component)
 - La pagina PRINCIPAL ver si se puede usar junto con angular material
-
+- Crear el #bloodInput = "ngForm" en ADDMEDICALCHECK Y EN TODO LO QUE NECESITE DEL BOTON PARA EL ARDUINO
 
 CONSIDERACIONES PARA CUANDO SE HAGA LA PARTE FUNCIONAL
 

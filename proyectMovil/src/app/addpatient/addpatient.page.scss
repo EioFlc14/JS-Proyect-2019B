@@ -6,20 +6,30 @@ ion-toolbar.toolbar {
   --background: #ecb5bf;
   font-family: "Times New Roman";
   text-align: center;
-  font-size: 35px;
+  font-size: 20px;
 }
 
-ion-icon.icon_back {
-  font-size: 32px;
+
+ion-button.exitButton {
+  --background: #ecb5bf;
+  height: 30px;
+  width: 50px ;
   position: relative;
-  top: 11px;
+  top: 8px;
+  left: 25px;
+}
+
+ion-button.backButton {
+  --background: #ecb5bf;
+  height: 30px;
+  width: 50px ;
+  position: relative;
+  top: 8px;
+
 }
 
 ion-icon.icon_exit {
-  font-size: 32px;
-  position: relative;
-  top: 11px;
-  left: 10px
+  font-size: 64px;
 }
 
 ion-button.addButton {

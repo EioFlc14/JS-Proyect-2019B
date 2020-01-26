@@ -1,19 +1,25 @@
 ion-header.header {
   background: #ecb5bf;
 }
-
 ion-toolbar.toolbar {
   --background: #ecb5bf;
   font-family: "Times New Roman";
   text-align: center;
-  font-size: 30px;
+  font-size: 20px;
+}
+
+
+ion-button.exitButton {
+  --background: #ecb5bf;
+  height: 30px;
+  width: 50px ;
+  position: relative;
+  top: 8px;
+  left: 25px;
 }
 
 ion-icon.icon_exit {
-  font-size: 32px;
-  position: relative;
-  top: 11px;
-  left: 10px
+  font-size: 64px;
 }
 
 ion-button.editButton {

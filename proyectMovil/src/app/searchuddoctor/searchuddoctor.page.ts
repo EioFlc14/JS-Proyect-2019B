@@ -18,6 +18,10 @@ export class SearchuddoctorPage implements OnInit {
     console.log('varios doctores');
   }
 
+  goPrincipal() {
+    this.router.navigate(['principal']);
+  }
+
   goUpdateDoctor() {
     this.router.navigate(['updatedoctor']);
   }

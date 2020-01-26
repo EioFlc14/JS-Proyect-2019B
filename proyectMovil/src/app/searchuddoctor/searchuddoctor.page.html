@@ -1,21 +1,27 @@
-<ion-header class="header">
+<!--<ion-header class="header">
     <ion-grid>
         <ion-row>
             <ion-col size="2">
-                <ion-icon class="icon_back" name="arrow-round-back" style="color: #1e2023"></ion-icon>
+                <ion-button class="backButton" (click)="goPrincipal()">
+                    <ion-icon class="icon_back" name="arrow-round-back" style="color: #1e2023" size="large"></ion-icon>
+                </ion-button>
             </ion-col>
             <ion-col size="8">
                 <ion-toolbar class="toolbar"> EEUU HOSPITAL</ion-toolbar>
             </ion-col>
             <ion-col size="2">
-                <ion-icon class="icon_exit" name="exit" style="color: #1e2023"></ion-icon>
+                <ion-button class="exitButton" >
+                    <ion-icon class="icon_exit" name="exit" style="color: #1e2023"></ion-icon>
+                </ion-button>
+
             </ion-col>
         </ion-row>
     </ion-grid>
 </ion-header>
 
+
 <div class="content_avatar">
-    <ion-item lines="none">
+    <ion-item >
         <ion-avatar slot="start">
             <img src="./src/assets/icon/fotoperfil.jpg">
         </ion-avatar>
@@ -29,10 +35,46 @@
         </ion-button>
     </ion-item>
 </div>
+<br>
+<ion-label text-center> SEARCH DOCTOR</ion-label>-->
 
-<ion-label text-center> SEARCH DOCTOR</ion-label>
+<p-button label="EDITAR" ></p-button>
+<p-table >
+    <ng-template pTemplate="header" let-columns>
+        <tr>
+            <th>Nombre</th>
+            <th>Apellido</th>
+            <th>Correo</th>
+            <th>Password</th>
+            <th>Acciones</th>
+        </tr>
+    </ng-template>
+    <ng-template pTemplate="body" let-rowData let-columns="columns">
+        <tr>
+            <td>d</td>
+            <td>c</td>
+            <td>b</td>
+            <td>a</td>
+            <td>
+                <p-button label="EDITAR" ></p-button>
+                <p-button label="ELIMINAR"></p-button>
+            </td>
+        </tr>
+        <tr>
+            <td>da</td>
+            <td>ca</td>
+            <td>ba</td>
+            <td>aa</td>
+            <td>
+                <p-button label="EDIaTAR" ></p-button>
+                <p-button label="ELIMaINAR"></p-button>
+            </td>
+        </tr>
+    </ng-template>
+</p-table>
 
-<ion-content>
+
+<!--<ion-content>
     <ion-grid>
 
         <ion-row>
@@ -67,7 +109,7 @@
 
     <ion-content>
         <ion-infinite-scroll threshold="100px" (ionInfinite)="modificarEstaFuncion()">
-            <!--AQUI VAN A CARGAR LOS DOCTORES QUE SALGAN EN LA BUSQUEDA -->
+            &lt;!&ndash;AQUI VAN A CARGAR LOS DOCTORES QUE SALGAN EN LA BUSQUEDA &ndash;&gt;
             <ion-infinite-scroll-content
                     loadingSpinner="bubbles"
                     loadingText="Loading more data...">
@@ -79,5 +121,5 @@
     <ion-button class="updateButton" expand="full" style="color: black; " (click)="goUpdateDoctor()">UPDATE</ion-button>
     <ion-button class="removeButton" expand="full" style="color: black; " (click)="removeConfirm()">REMOVE</ion-button>
 
-</ion-content>
+</ion-content>-->
 

@@ -2,6 +2,7 @@ import { Component, OnInit } from '@angular/core';
 import {Router} from '@angular/router';
 import { AlertController, ToastController } from '@ionic/angular';
 
+
 @Component({
   selector: 'app-searchuddoctor',
   templateUrl: './searchuddoctor.page.html',
@@ -9,10 +10,21 @@ import { AlertController, ToastController } from '@ionic/angular';
 })
 export class SearchuddoctorPage implements OnInit {
 
+  cols = [
+    { field: 'vin', header: 'Vin' },
+    { field: 'year', header: 'Year' },
+    { field: 'brand', header: 'Brand' },
+    { field: 'color', header: 'Color' }
+  ];
+
   constructor(private router: Router,
               public alertController: AlertController,
               public toastController: ToastController
   ) { }
+
+
+
+
 
   goPrincipal() {
     this.router.navigate(['principal']);

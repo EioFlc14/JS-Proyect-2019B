@@ -1,4 +1,4 @@
-<ion-header class="header">
+<!--<ion-header class="header">
     <ion-grid>
         <ion-row>
             <ion-col size="2">
@@ -35,9 +35,45 @@
     </ion-item>
 </div>
 <br>
-<ion-label text-center> SEARCH DOCTOR</ion-label>
+<ion-label text-center> SEARCH DOCTOR</ion-label>-->
 
-<ion-content>
+<p-button label="EDITAR" ></p-button>
+<p-table >
+    <ng-template pTemplate="header" let-columns>
+        <tr>
+            <th>Nombre</th>
+            <th>Apellido</th>
+            <th>Correo</th>
+            <th>Password</th>
+            <th>Acciones</th>
+        </tr>
+    </ng-template>
+    <ng-template pTemplate="body" let-rowData let-columns="columns">
+        <tr>
+            <td>d</td>
+            <td>c</td>
+            <td>b</td>
+            <td>a</td>
+            <td>
+                <p-button label="EDITAR" ></p-button>
+                <p-button label="ELIMINAR"></p-button>
+            </td>
+        </tr>
+        <tr>
+            <td>da</td>
+            <td>ca</td>
+            <td>ba</td>
+            <td>aa</td>
+            <td>
+                <p-button label="EDIaTAR" ></p-button>
+                <p-button label="ELIMaINAR"></p-button>
+            </td>
+        </tr>
+    </ng-template>
+</p-table>
+
+
+<!--<ion-content>
     <ion-grid>
 
         <ion-row>
@@ -72,7 +108,7 @@
 
     <ion-content>
         <ion-infinite-scroll threshold="100px" (ionInfinite)="modificarEstaFuncion()">
-            <!--AQUI VAN A CARGAR LOS DOCTORES QUE SALGAN EN LA BUSQUEDA -->
+            &lt;!&ndash;AQUI VAN A CARGAR LOS DOCTORES QUE SALGAN EN LA BUSQUEDA &ndash;&gt;
             <ion-infinite-scroll-content
                     loadingSpinner="bubbles"
                     loadingText="Loading more data...">
@@ -84,5 +120,5 @@
     <ion-button class="updateButton" expand="full" style="color: black; " (click)="goUpdateDoctor()">UPDATE</ion-button>
     <ion-button class="removeButton" expand="full" style="color: black; " (click)="removeConfirm()">REMOVE</ion-button>
 
-</ion-content>
+</ion-content>-->
 

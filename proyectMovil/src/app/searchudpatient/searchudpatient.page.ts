@@ -18,6 +18,10 @@ export class SearchudpatientPage implements OnInit {
     console.log('varios pacientes');
   }
 
+  goPrincipal() {
+    this.router.navigate(['principal']);
+  }
+
   goUpdatePatient() {
     this.router.navigate(['updatepatient']);
   }

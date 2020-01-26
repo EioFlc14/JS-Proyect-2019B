@@ -18,6 +18,10 @@ export class SearchudmedicalcheckPage implements OnInit {
     console.log('varios pacientes');
   }
 
+  goPrincipal() {
+    this.router.navigate(['principal']);
+  }
+
   goUpdateMedicalCheck() {
     this.router.navigate(['updatemedicalcheck']);
   }

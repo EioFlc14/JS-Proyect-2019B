@@ -2,7 +2,7 @@
     <ion-grid>
         <ion-row>
             <ion-col size="2">
-                <ion-button class="backButton" (click)="goPrincipal()" >
+                <ion-button class="backButton" (click)="goPrincipal()">
                     <ion-icon class="icon_back" name="arrow-round-back" style="color: #1e2023" size="large"></ion-icon>
                 </ion-button>
             </ion-col>
@@ -39,98 +39,149 @@
 <ion-label text-center> ADD DOCTOR</ion-label>
 
 <ion-content>
-    <ion-grid>
-        <ion-row>
-            <ion-col size="4.5">
-                <ion-item lines="none" text-justify>
-                    <ion-label>Doctor <br>
-                        Identificaction:
-                    </ion-label>
-                </ion-item>
-            </ion-col>
-            <ion-col size="7.5">
-                <ion-item>
-                    <ion-input type="text"
-                               name="id"
-                               placeholder="Ej: 1781818193">
-                    </ion-input>
-                </ion-item>
-            </ion-col>
-        </ion-row>
+    <form (ngSubmit)="addDoctor(doctorForm)" #doctorForm="ngForm">
+        <ion-grid>
+            <ion-row>
+                <ion-col size="4.5">
+                    <ion-item lines="none" text-justify>
+                        <ion-label>Doctor's <br>
+                            Identification:
+                        </ion-label>
+                    </ion-item>
+                </ion-col>
+                <ion-col size="7.5">
+                    <ion-item>
+                        <ion-input type="text"
+                                   name="id"
+                                   pattern="([0-9])+"
+                                   required
+                                   [(ngModel)]="doctor.identification"
+                                   placeholder="Ej: 1781818193"
+                                   #identificationInput ="ngModel">
+                        </ion-input>
+                    </ion-item>
+                    <div *ngIf="identificationInput.touched && identificationInput.dirty">
+                        <p *ngIf="identificationInput.errors?.required " style="color: red">
+                           This field is required.
+                        </p>
 
-        <ion-row>
-            <ion-col size="4.5">
-                <ion-item lines="none">
-                    <ion-label>Doctor
-                        Name:
-                    </ion-label>
-                </ion-item>
-            </ion-col>
-            <ion-col size="7.5">
-                <ion-item>
-                    <ion-input type="text"
-                               name="id"
-                               placeholder="Ej: Edison Ubaldo">
-                    </ion-input>
-                </ion-item>
-            </ion-col>
-        </ion-row>
+                        <p *ngIf="identificationInput.errors?.pattern" style="color: red">
+                            Only-numbers Field.
+                        </p>
+                    </div>
+                </ion-col>
+            </ion-row>
 
-        <ion-row>
-            <ion-col size="4.5">
-                <ion-item lines="none">
-                    <ion-label>Doctor <br>
-                        Lastname:
-                    </ion-label>
-                </ion-item>
-            </ion-col>
-            <ion-col size="7.5">
-                <ion-item>
-                    <ion-input type="text"
-                               name="id"
-                               placeholder="Ej: Sanango Simbaña">
-                    </ion-input>
-                </ion-item>
-            </ion-col>
-        </ion-row>
+            <ion-row>
+                <ion-col size="4.5">
+                    <ion-item lines="none">
+                        <ion-label>Doctor's
+                            Names:
+                        </ion-label>
+                    </ion-item>
+                </ion-col>
+                <ion-col size="7.5">
+                    <ion-item>
+                        <ion-input type="text"
+                                   name="names"
+                                   required
+                                   pattern="[a-zA-ZÀ-ÿ\u00f1\u00d1]{1}[a-zA-ZÀ-ÿ\u00f1\u00d1\s]*"
+                                   maxlength="50"
+                                   placeholder="Ej: Edison Ubaldo"
+                                   [(ngModel)]="doctor.names"
+                                   #namesInput="ngModel">
+                        </ion-input>
+                    </ion-item>
+                    <div *ngIf="namesInput.touched && namesInput.dirty">
+                        <p *ngIf="namesInput.errors?.required " style="color: red">
+                            This field is required.
+                        </p>
 
-        <ion-row>
-            <ion-col size="4.5">
-                <ion-item lines="none">
-                    <ion-label>Doctor <br>
-                        Speciality:
-                    </ion-label>
-                </ion-item>
-            </ion-col>
-            <ion-col size="7.5">
-                <ion-item>
-                    <ion-select>
-                        <ion-select-option> Cardiologist</ion-select-option>
-                        <ion-select-option> Pediatrician</ion-select-option>
-                        <ion-select-option> Orthopedic</ion-select-option>
-                    </ion-select>
-                </ion-item>
-            </ion-col>
-        </ion-row>
+                        <p *ngIf="namesInput.errors?.pattern" style="color: red">
+                            Only-words Field.
+                        </p>
 
-        <ion-row>
-            <ion-col size="4.5">
-                <ion-item lines="none">
-                    <ion-label>Doctor <br>
-                        Birthdate:
-                    </ion-label>
-                </ion-item>
-            </ion-col>
-            <ion-col size="7.5">
-                <ion-item>
-                    <ion-datetime placeholder="Select Date"></ion-datetime>
-                </ion-item>
-            </ion-col>
-        </ion-row>
+                    </div>
+                </ion-col>
+            </ion-row>
 
-    </ion-grid>
+            <ion-row>
+                <ion-col size="4.5">
+                    <ion-item lines="none">
+                        <ion-label>Doctor's <br>
+                            Lastnames:
+                        </ion-label>
+                    </ion-item>
+                </ion-col>
+                <ion-col size="7.5">
+                    <ion-item>
+                        <ion-input type="text"
+                                   name="lastNames"
+                                   required
+                                   pattern="[a-zA-ZÀ-ÿ\u00f1\u00d1]{1}[a-zA-ZÀ-ÿ\u00f1\u00d1\s]*"
+                                   maxlength="50"
+                                   placeholder="Ej: Sanango Simbaña"
+                                   [(ngModel)]="doctor.lastNames"
+                                   #lastNamesInput="ngModel" >
+                        </ion-input>
+                    </ion-item>
+                    <div *ngIf="lastNamesInput.touched && lastNamesInput.dirty">
+                        <p *ngIf="lastNamesInput.errors?.required " style="color: red">
+                            This field is required.
+                        </p>
 
-    <ion-button class="addButton" expand="full" style="color: black; ">ADD</ion-button>
+                        <p *ngIf="lastNamesInput.errors?.pattern" style="color: red">
+                            Only-words Field.
+                        </p>
 
+                    </div>
+                </ion-col>
+            </ion-row>
+
+   <!--         <ion-row>
+                <ion-col size="4.5">
+                    <ion-item lines="none">
+                        <ion-label>Doctor's <br>
+                            Specialty:
+                        </ion-label>
+                    </ion-item>
+                </ion-col>
+                <ion-col size="7.5">
+                    <ion-item>
+                        <ion-select>
+                            <ion-select-option name = "specialty"
+                                               [(ngModel)]="doctor.specialty"
+                                               #specialtyInput="ngModel">  Cardiologist</ion-select-option>
+                        </ion-select>
+                    </ion-item>
+                </ion-col>
+            </ion-row>-->
+
+            <ion-row>
+                <ion-col size="4.5">
+                    <ion-item lines="none">
+                        <ion-label>Doctor's <br>
+                            Birthdate:
+                        </ion-label>
+                    </ion-item>
+                </ion-col>
+                <ion-col size="7.5">
+                    <ion-item>
+                        <ion-datetime type="Date"
+                                      name=" birthdate"
+                                      required
+                                      [(ngModel)]="doctor.birthdate"
+                                      #birthdateInput = "ngModel"></ion-datetime>
+                    </ion-item>
+                </ion-col >
+            </ion-row>
+
+        </ion-grid>
+
+        <ion-button class="addButton"
+                    expand="full"
+                    style="color: black;"
+                    [disabled]="!doctorForm.valid" (click)="addConfirm()">ADD</ion-button>
+    </form>
 </ion-content>
 
