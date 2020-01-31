@@ -22,7 +22,7 @@
   <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
   <component name="PropertiesComponent">
     <property name="WebServerToolWindowFactoryState" value="false" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/../js-sanango-simba-a-ubaldo-edison" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
   </component>
   <component name="RunDashboard">
     <option name="ruleStates">
@@ -50,6 +50,7 @@
       <workItem from="1578276230999" duration="1314000" />
       <workItem from="1578312591117" duration="61000" />
       <workItem from="1580442619638" duration="5038000" />
+      <workItem from="1580473443834" duration="10140000" />
     </task>
     <servers />
   </component>

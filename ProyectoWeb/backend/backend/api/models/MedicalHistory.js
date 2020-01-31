@@ -9,6 +9,21 @@ module.exports = {
 
   attributes: {
 
+    id: {
+      type: 'number',
+      unique: true,
+      autoIncrement: true,
+      required: true
+    },
+    record: {
+      type: 'string',
+      required: true
+    },
+    users: {
+      model:'user',
+      unique: true
+    }
+
   },
 
 };

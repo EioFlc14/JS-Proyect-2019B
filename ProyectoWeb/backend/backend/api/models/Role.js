@@ -7,17 +7,26 @@
 
 module.exports = {
 
+
+
   attributes: {
-    role_id: {
+
+    id: {
       type: 'number',
+      unique: true,
+      autoIncrement: true,
       required: true
     },
     role: {
       type: 'string',
       required: true
+    },
+    users:{
+      collection: 'user',
+      via: 'roles'
     }
 
-  }
+  },
 
 };
 

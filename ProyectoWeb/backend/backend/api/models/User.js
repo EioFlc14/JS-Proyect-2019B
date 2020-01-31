@@ -8,15 +8,17 @@
 module.exports = {
 
   attributes: {
-    user_code: {
+
+    id: {
       type: 'number',
-      required:true
+      unique: true,
+      required: true
     },
-    user_identifcator: {
+    user_identificator: {
       type: 'string',
       required: true
     },
-    user_login: {
+    user_username: {
       type: 'string',
       required:true
     },
@@ -35,7 +37,20 @@ module.exports = {
     user_birthdate:{
       type: 'string',
       required: true
+    },
+    specialties:{
+      collection: 'specialty',
+      via: 'users'
+    },
+    roles:{
+      collection: 'role',
+      via:'users'
+    },
+    medicalHistory:{
+      collection:'medicalHistory',
+      via: 'users'
     }
+
   },
 
 };
