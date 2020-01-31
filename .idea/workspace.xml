@@ -8,6 +8,13 @@
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
     <option name="LAST_RESOLUTION" value="IGNORE" />
   </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="JavaScript File" />
+      </list>
+    </option>
+  </component>
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
@@ -15,7 +22,7 @@
   <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
   <component name="PropertiesComponent">
     <property name="WebServerToolWindowFactoryState" value="false" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/proyectMovil" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/../js-sanango-simba-a-ubaldo-edison" />
   </component>
   <component name="RunDashboard">
     <option name="ruleStates">
@@ -42,16 +49,12 @@
       <workItem from="1577304874442" duration="547000" />
       <workItem from="1578276230999" duration="1314000" />
       <workItem from="1578312591117" duration="61000" />
+      <workItem from="1580442619638" duration="5038000" />
     </task>
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
     <option name="version" value="1" />
-    <option name="exactExcludedFiles">
-      <list>
-        <option value="$PROJECT_DIR$/proyectWeb/node_modules/.staging/karma-134c0548/config.tpl.js" />
-      </list>
-    </option>
   </component>
   <component name="Vcs.Log.Tabs.Properties">
     <option name="TAB_STATES">
