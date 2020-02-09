@@ -7,34 +7,35 @@
 
 module.exports = {
 
+  primaryKey: 'id',
+
   attributes: {
 
     id: {
       type: 'number',
-      unique: true,
-      required: true
+      autoIncrement: true
     },
-    user_identificator: {
+    userIdentificator: {
       type: 'string',
       required: true
     },
-    user_username: {
+    userUsername: {
       type: 'string',
       required:true
     },
-    user_password: {
+    userPassword: {
       type:'string',
       required: true
     },
-    user_name: {
+    userName: {
       type:'string',
       required:true
     },
-    user_lastname: {
+    userLastname: {
       type:'string',
       required:true
     },
-    user_birthdate:{
+    userBirthdate:{
       type: 'string',
       required: true
     },
