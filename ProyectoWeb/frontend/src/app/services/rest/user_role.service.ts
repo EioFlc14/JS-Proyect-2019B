@@ -15,6 +15,12 @@ export class UserRoleRestService {
     private readonly _httpClient: HttpClient,
   ){}
 
+  search(idUser:number){
+    const url = this.url + '?user_roles=' + idUser;
+    return this._httpClient.get(url);
+
+  }
+
 
   getAllPatients(){
     const urlGetAllPatients = this.url + '?role_users=3';

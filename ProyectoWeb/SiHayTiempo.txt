@@ -8,7 +8,3 @@ EN CASO DE TENER TIEMPO:
 	- Una imagen en la principal de esas que pasan después de un tiempo
 	- VALLIDAR EL PESO MAYOR QUE 0 CUANDO SE REGISTRA UN MEDICAL CHECK
 	- VALIDAR QUE LAS FECHAS SEAN MAYORES Y OTROS MENORES (noción del tiempo)
-
-	
-HACER EL ELIMINAR DE DOCTOR toca eliminar desde usuario y de seguro en specilaty y medical check pero primero probar 
-borrando directamente a la TABLA USER y si sigue haabiendo entonces se manda al resto de tablas

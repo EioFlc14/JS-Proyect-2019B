@@ -5,6 +5,7 @@
 export const environment = {
   production: false,
   url: 'http://localhost:1337', //direccion para restfull
+  urlArduino: 'http://localhost:1338/pulso',
 };
 
 /*

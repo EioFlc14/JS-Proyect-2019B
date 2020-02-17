@@ -46,8 +46,16 @@ export class MedicalCheckRestService {
   delete(id:number){
     const urlDelete = this.url + '/' + id;
     return this._httpClient.delete(urlDelete);
+  }
 
+  searchByDoctorEncharged(id:number){
+    const url = this.url + '?doctorEncharged=' + id;
+    return this._httpClient.get(url);
+  }
 
+  searchByPatientMedicalHistory(id:number){
+    const url = this.url + '?patientMedicalHistory=' + id;
+    return this._httpClient.get(url);
   }
 
 

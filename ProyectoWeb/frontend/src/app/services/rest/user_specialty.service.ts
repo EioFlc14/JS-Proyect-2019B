@@ -16,6 +16,10 @@ export class UserSpecialtyRestService {
   ) {
   }
 
+  delete(id:number){
+    const url = this.url + '/' + id;
+    return this._httpClient.delete(url);
+  }
 
   getAllDoctorsSpecialty() {
     const urlGet = this.url;

@@ -25,6 +25,12 @@ export class UserRestService {
       );
   }
 
+  search(id:number){
+    const url = this.url + '?id=' + id;
+    return this._httpClient.get(url);
+
+  }
+
   create(data: any) : Observable<any> {
     const urlCreate = this.url;
     return this._httpClient
@@ -35,6 +41,7 @@ export class UserRestService {
   }
 
   delete(id:number){
+    console.log('id:', id);
     const urlDelete = this.url + '/' + id;
     return this._httpClient.delete(urlDelete);
   }

@@ -3,6 +3,7 @@ import {UserRoleRestService} from "../../services/rest/user_role.service";
 import {MessageService} from "primeng";
 import {MedicalCheckRestService} from "../../services/rest/medicalCheck-rest.service";
 import {MedicalHistoryRestService} from "../../services/rest/medicalHistory.service";
+import {ArduinoService} from "../../services/rest/arduino.service";
 
 
 @Component({
@@ -29,6 +30,7 @@ export class RutaAddMedicalCheckComponent implements OnInit {
   resultsD: string[] = [];
 
   constructor(private readonly _userService: UserRoleRestService,
+              private readonly _arduinoService: ArduinoService,
               private messageService: MessageService,
               private readonly  _medicalCheckService: MedicalCheckRestService,
               private readonly _medicalHistory: MedicalHistoryRestService) {
@@ -40,12 +42,19 @@ export class RutaAddMedicalCheckComponent implements OnInit {
 
   filterPatientsMedicalHistoriesHTTP(event) {
     let query = event.query;
+    let patientsMH: any[] = [];
     const resultPatientsMH$ = this._medicalHistory.getAllMedicalHistories();
 
     resultPatientsMH$
       .subscribe(
-        (patientsMH: any[]) => {
-          //console.log('patientsMH:', patientsMH);
+        (patientsPreliminares: any[]) => {
+          console.log('patientsMH:', patientsPreliminares);
+          for (let i = 0; i < patientsPreliminares.length; i++) {
+            if(patientsPreliminares[i].users != null){
+              patientsMH.push(patientsPreliminares[i]);
+            }
+          }
+
           this.resultsPatientsMH = this.filterPatientMedicalHistory(query, patientsMH);
         },
         () => {
@@ -97,6 +106,18 @@ export class RutaAddMedicalCheckComponent implements OnInit {
   }
 
   takeBloodPressure() {
+
+    const pulsos$ = this._arduinoService.getBloodPressure();
+
+    pulsos$
+      .subscribe(
+        (bloods)=>{
+          //bloods tiene todos los json con el valor del pulso, es un arreglo y toca trabajar con un arreglo
+          //se debe extraer el json.valor y sumar todos esos con un reduce
+          //y luego ese valor se lo divide para 5 y eso le seteo en la pantalla
+        }
+      );
+
     //this.bloodPressure = 30; //llamar a la funcion del arduino
   }
 

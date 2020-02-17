@@ -23,7 +23,8 @@
   <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
   <component name="PropertiesComponent">
     <property name="WebServerToolWindowFactoryState" value="false" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/../js-sanango-simba-a-ubaldo-edison" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
+    <property name="nodejs_package_manager_path" value="npm" />
     <property name="ts.external.directory.path" value="D:\GitHub\JS-Proyect-2019B\ProyectoWeb\frontend\node_modules\typescript\lib" />
   </component>
   <component name="RunDashboard">
@@ -60,6 +61,8 @@
       <workItem from="1581797488472" duration="12445000" />
       <workItem from="1581813669830" duration="9633000" />
       <workItem from="1581858776041" duration="54138000" />
+      <workItem from="1581952845633" duration="8753000" />
+      <workItem from="1581969636502" duration="10930000" />
     </task>
     <servers />
   </component>
