@@ -12,6 +12,7 @@
     <option name="RECENT_TEMPLATES">
       <list>
         <option value="JavaScript File" />
+        <option value="TypeScript File" />
       </list>
     </option>
   </component>
@@ -22,8 +23,8 @@
   <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
   <component name="PropertiesComponent">
     <property name="WebServerToolWindowFactoryState" value="false" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
-    <property name="ts.external.directory.path" value="D:\JetBrains\WebStorm 2019.2.3\plugins\JavaScriptLanguage\jsLanguageServicesImpl\external" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/../js-sanango-simba-a-ubaldo-edison" />
+    <property name="ts.external.directory.path" value="D:\GitHub\JS-Proyect-2019B\ProyectoWeb\frontend\node_modules\typescript\lib" />
   </component>
   <component name="RunDashboard">
     <option name="ruleStates">
@@ -54,6 +55,11 @@
       <workItem from="1580473443834" duration="12347000" />
       <workItem from="1580613357718" duration="48000" />
       <workItem from="1580937183699" duration="59000" />
+      <workItem from="1581688808289" duration="31429000" />
+      <workItem from="1581724012127" duration="4029000" />
+      <workItem from="1581797488472" duration="12445000" />
+      <workItem from="1581813669830" duration="9633000" />
+      <workItem from="1581858776041" duration="54138000" />
     </task>
     <servers />
   </component>

@@ -7,14 +7,14 @@
 
 module.exports = {
 
-  primaryKey: 'id',
+  // primaryKey: 'id',
 
   attributes: {
 
-    id: {
-      type: 'number',
-      autoIncrement: true
-    },
+    // id: {
+    //   type: 'number',
+    //   autoIncrement: true
+    // },
     specialty: {
       type: 'string',
       required:true

@@ -7,21 +7,26 @@
 
 module.exports = {
 
-  primaryKey: 'id',
+  // primaryKey: 'id',
 
   attributes: {
 
-    id: {
-      type: 'number',
-      autoIncrement: true
-    },
+    // id: {
+    //   type: 'number',
+    //   autoIncrement: true
+    // },
     record: {
       type: 'string',
       required: true
     },
-    users: {
-      model:'user',
-      unique: true
+    users:{
+      model: 'user',
+      unique: true,
+    },
+    usersMC: {
+      collection:'user',
+      via: 'patientMedicalHistory',
+      through: 'medicalCheck'
     }
 
   },

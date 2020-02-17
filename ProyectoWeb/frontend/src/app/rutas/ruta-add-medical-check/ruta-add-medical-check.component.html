@@ -1,0 +1,162 @@
+<div class="ui-fluid">
+
+  <h1 style="text-align: center; color: hotpink "> ADD MEDICAL CHECK </h1>
+  <form #medicalCheckForm="ngForm">
+    <div class="ui-g-12 ui-md-3"></div>
+
+    <div class="ui-g-12 ui-md-6">
+
+
+      <div class="ui-g-12 ui-md-12">
+        <div class="ui-g-4">
+          Patient's Medical History Code:
+        </div>
+        <div class="ui-g-8">
+          <p-autoComplete name="patient" pattern="([0-9])+"  [(ngModel)]="medicalCheck.patientMedicalHistory" [suggestions]="resultsPatientsMH" (completeMethod)="filterPatientsMedicalHistoriesHTTP($event)"
+                          #patientIdentification="ngModel" required></p-autoComplete>
+        </div>
+      </div>
+
+      <div *ngIf="patientIdentification.touched && patientIdentification.dirty">
+        <p *ngIf="patientIdentification.errors?.required " style="color: red">
+          This field is required.
+        </p>
+
+        <p *ngIf="patientIdentification.errors?.pattern" style="color: red">
+          Numeric Field.
+        </p>
+      </div>
+
+      <div class="ui-g-12 ui-md-12">
+        <div class="ui-g-4">
+          Doctor's Code:
+        </div>
+        <div class="ui-g-8">
+          <p-autoComplete name="doctor"  pattern="([0-9])+" [(ngModel)]="medicalCheck.doctorEncharged" [suggestions]="resultsD" (completeMethod)="filterDoctorsHTTP($event)"
+                          #doctorIdentification="ngModel" required></p-autoComplete>
+        </div>
+      </div>
+
+      <div *ngIf="doctorIdentification.touched && doctorIdentification.dirty">
+        <p *ngIf="doctorIdentification.errors?.required " style="color: red">
+          This field is required.
+        </p>
+
+        <p *ngIf="doctorIdentification.errors?.pattern" style="color: red">
+          Numeric Field.
+        </p>
+      </div>
+
+
+      <div class="ui-g-12 ui-md-12">
+        <div class="ui-g-4">
+          Patient's Admit Date:
+        </div>
+        <div class="ui-g-8">
+          <p-calendar name="admitDate" [(ngModel)]="medicalCheck.admitDate" #admitDateInput="ngModel" required></p-calendar>
+        </div>
+      </div>
+
+      <div *ngIf="admitDateInput.touched && admitDateInput.dirty">
+        <p *ngIf="admitDateInput.errors?.required " style="color: red">
+          This field is required.
+        </p>
+
+      </div>
+
+      <div class="ui-g-12 ui-md-12">
+        <div class="ui-g-4">
+          Patient's Discharge Date:
+        </div>
+        <div class="ui-g-8">
+          <p-calendar name="dischargeDate" [(ngModel)]="medicalCheck.dischargeDate" #dischargeDateInput="ngModel" disabled ></p-calendar>
+        </div>
+      </div>
+
+<!--      <div *ngIf="dischargeDateInput.touched && dischargeDateInput.dirty">-->
+<!--        <p *ngIf="dischargeDateInput.errors?.required " style="color: red">-->
+<!--          This field is required.-->
+<!--        </p>-->
+
+<!--      </div>-->
+
+
+      <div class="ui-g-12 ui-md-12">
+        <div class="ui-g-4">
+          Blood Pressure:
+        </div>
+        <div class="ui-g-8">
+          <div class="ui-g-8">
+            <input pInputText type="text" name="blood" pattern="([0-9])+" [(ngModel)]="medicalCheck.bloodPresure"
+                   #bloodPressureInput="ngModel"  required  />
+          </div>
+          <div class="ui-g-4">
+            <button pButton type="button" name="buttonBlood" icon="pi pi-heart" style="margin-right: .5em; width: 195px; background-color: hotpink" (click)="takeBloodPressure()" ></button>
+          </div>
+        </div>
+
+      </div>
+
+      <div *ngIf="bloodPressureInput.touched && bloodPressureInput.dirty">
+        <p *ngIf="bloodPressureInput.errors?.required " style="color: red">
+          This field is required.
+        </p>
+
+        <p *ngIf="bloodPressureInput.errors?.pattern" style="color: red">
+          Numeric Field.
+        </p>
+      </div>
+
+
+      <div class="ui-g-12 ui-md-12">
+        <div class="ui-g-4">
+          Weight:
+        </div>
+        <div class="ui-g-8">
+          <input pInputText type="text" name="weight" pattern="([0-9])+" [(ngModel)]="medicalCheck.weight" #weightInput="ngModel"
+                 required/>
+        </div>
+      </div>
+
+      <div *ngIf="weightInput.touched && weightInput.dirty">
+        <p *ngIf="weightInput.errors?.required " style="color: red">
+          This field is required.
+        </p>
+
+        <p *ngIf="weightInput.errors?.pattern" style="color: red">
+          Numeric Field.
+        </p>
+      </div>
+
+
+      <div class="ui-g-12 ui-md-12">
+        <div class="ui-g-4">
+          Diagnosis:
+        </div>
+        <div class="ui-g-8">
+          <textarea pInputTextarea type="text" name="diagnosis" [(ngModel)]="medicalCheck.diagnosis" #diagnosisInput="ngModel" required ></textarea>
+        </div>
+      </div>
+
+      <div *ngIf="diagnosisInput.touched && diagnosisInput.dirty">
+        <p *ngIf="diagnosisInput.errors?.required " style="color: red">
+          This field is required.
+        </p>
+
+      </div>
+
+      <div class="ui-g-12 ui-md-12">
+        <div class="ui-g-12">
+          <button pButton name="addButton" label="ADD" type="button" style="background-color: hotpink"
+                  [disabled]="!medicalCheckForm.valid" (click)="addMedicalCheck()" ></button>
+        </div>
+      </div>
+
+      <p-toast key="myKey1" position="bottom-left"  ></p-toast>
+
+    </div>
+
+    <div class="ui-g-12 ui-md-3"></div>
+  </form>
+</div>
+

@@ -1,0 +1,127 @@
+<div class="ui-fluid">
+
+  <h1 style="text-align: center; color: hotpink "> UPDATE DOCTOR </h1>
+  <form #doctorForm="ngForm" >
+    <div class="ui-g-12 ui-md-3"></div>
+
+    <div class="ui-g-12 ui-md-6">
+
+      <div class="ui-g-12 ui-md-12">
+        <div class="ui-g-4">
+          Doctor's Identification:
+        </div>
+        <div class="ui-g-8">
+          <input pInputText type="text" name="identification" pattern="([0-9])+" [(ngModel)]="doctor.userIdentificator" #identificationInput="ngModel" readonly disabled />
+        </div>
+      </div>
+
+
+      <div class="ui-g-12 ui-md-12">
+        <div class="ui-g-4">
+          Doctor's Names:
+        </div>
+        <div class="ui-g-8">
+          <input pInputText type="text" name="names" pattern="[a-zA-ZÀ-ÿ\u00f1\u00d1]{1}[a-zA-ZÀ-ÿ\u00f1\u00d1\s]*"  [(ngModel)]="doctor.userName" #namesInput="ngModel" readonly  disabled/>
+        </div>
+      </div>
+
+
+      <div class="ui-g-12 ui-md-12">
+        <div class="ui-g-4">
+          Doctor's Lastnames:
+        </div>
+        <div class="ui-g-8">
+          <input pInputText type="text" name="lastnames" pattern="[a-zA-ZÀ-ÿ\u00f1\u00d1]{1}[a-zA-ZÀ-ÿ\u00f1\u00d1\s]*"  [(ngModel)]="doctor.userLastname" #lastnamesInput="ngModel" readonly  disabled/>
+        </div>
+      </div>
+
+      <div *ngIf="lastnamesInput.touched && lastnamesInput.dirty">
+        <p *ngIf="lastnamesInput.errors?.required " style="color: red">
+          This field is required.
+        </p>
+
+        <p *ngIf="lastnamesInput.errors?.pattern" style="color: red">
+          Letters Field.
+        </p>
+      </div>
+
+
+      <div class="ui-g-12 ui-md-12">
+        <div class="ui-g-4">
+          Doctor's Birthdate:
+        </div>
+        <div class="ui-g-8">
+          <p-calendar name="birthdate" [(ngModel)]="doctor.userBirthdate" dateFormat="dd/mm/yy"  #birthdateInput="ngModel" readonly disabled ></p-calendar>
+        </div>
+      </div>
+
+
+      <div class="ui-g-12 ui-md-12">
+        <div class="ui-g-4">
+          Doctor's Specialty:
+        </div>
+        <div class="ui-g-8">
+          <input pInputText type="text" name="specialty"  [(ngModel)]="specialty.specialty"    #specialtyInput="ngModel" readonly  disabled/>
+        </div>
+      </div>
+
+      <div *ngIf="specialtyInput.touched && specialtyInput.dirty">
+        <p *ngIf="specialtyInput.errors?.required " style="color: red">
+          This field is required.
+        </p>
+
+      </div>
+
+      <div class="ui-g-12 ui-md-12">
+        <div class="ui-g-4">
+          Phone:
+        </div>
+        <div class="ui-g-8">
+          <input pInputText type="text" name="phone" pattern="([0-9])+" [(ngModel)]="doctor.userPhone" #phoneInput="ngModel" required />
+        </div>
+      </div>
+
+      <div *ngIf="phoneInput.touched && phoneInput.dirty">
+        <p *ngIf="phoneInput.errors?.required " style="color: red">
+          This field is required.
+        </p>
+
+        <p *ngIf="phoneInput.errors?.pattern" style="color: red">
+          Numeric Field.
+        </p>
+      </div>
+
+      <div class="ui-g-12 ui-md-12">
+        <div class="ui-g-4">
+          E-mail:
+        </div>
+        <div class="ui-g-8">
+          <input pInputText type="email" name="email" [(ngModel)]="doctor.userEmail" #emailInput="ngModel" required />
+        </div>
+      </div>
+
+      <div *ngIf="emailInput.touched && emailInput.dirty">
+        <p *ngIf="emailInput.errors?.required " style="color: red">
+          This field is required.
+        </p>
+
+      </div>
+
+
+      <div class="ui-g-12 ui-md-12">
+        <div class="ui-g-12">
+          <button pButton name="updateButton" label="UPDATE" type="button" style="background-color: hotpink" [disabled]="!doctorForm.valid" (click)="updateDoctor()" > </button>
+        </div>
+      </div>
+
+
+      <p-toast key="myKey1" position="bottom-left"  ></p-toast>
+
+
+
+    </div>
+
+    <div class="ui-g-12 ui-md-3"></div>
+  </form>
+</div>
+

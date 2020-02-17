@@ -1,0 +1,64 @@
+<h1 style="text-align: center; color: hotpink " > MANAGE MEDICAL CHECK </h1>
+
+<p-table [value]="filteredMedicalChecks()"
+         [paginator]="true"
+         [rows]="ROWS">
+  <ng-template pTemplate="caption">
+    Medical Check List
+  </ng-template>
+  <ng-template pTemplate="header">
+    <tr>
+      <th>Medical Check Code</th>
+      <th>Patient Code</th>
+      <th>Doctor Code</th>
+      <th>Admit Date</th>
+      <th>Actions</th>
+    </tr>
+    <tr>
+      <th>
+        <input type="text"
+               pInputText
+               name="code"
+               [(ngModel)]="filteredId">
+      </th>
+      <th>
+        <input type="text"
+               pInputText
+               name="patient"
+               [(ngModel)]="filteredPatient">
+      </th>
+      <th>
+        <input type="text"
+               pInputText
+               name="doctor"
+               [(ngModel)]="filteredDoctor">
+      </th>
+      <th>
+        <input type="text"
+               pInputText
+               name="admitDate"
+               [(ngModel)]="filteredAdmitDate">
+
+      </th>
+      <th></th>
+    </tr>
+  </ng-template>
+  <ng-template pTemplate="body" let-medicalCheck>
+    <tr>
+      <td>{{medicalCheck.id}}</td>
+      <td>{{medicalCheck.patientMedicalHistory.id}}</td>
+      <td>{{medicalCheck.doctorEncharged.id}}</td>
+      <td>{{medicalCheck.admitDate}}</td>
+      <td>
+        <a [routerLink]="['/login','principal', 'updateMedicalCheck',medicalCheck.id]" >
+          <button pButton type="button" class="ui-button-success" icon="pi pi-pencil" style="margin-right: .5em;"></button>
+        </a>
+        <div *ngIf="_authService.deleteMedicalCheck">
+          <button pButton  type="button" class="ui-button-danger" icon="pi pi-trash" style="margin-right: .5em;" (click)="delete(medicalCheck.id)" ></button>
+        </div>
+      </td>
+    </tr>
+  </ng-template>
+</p-table>
+
+<p-toast key="myKey1" position="top-right"  ></p-toast>

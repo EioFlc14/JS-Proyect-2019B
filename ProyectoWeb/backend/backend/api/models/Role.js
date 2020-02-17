@@ -7,13 +7,13 @@
 
 module.exports = {
 
-  primaryKey: 'id',
+  // primaryKey: 'id',
 
   attributes: {
-    id: {
-      type: 'number',
-      autoIncrement: true
-    },
+    // id: {
+    //   type: 'number',
+    //   autoIncrement: true
+    // },
     role: {
       type: 'string',
       required: true

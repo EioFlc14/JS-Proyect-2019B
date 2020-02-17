@@ -1,0 +1,47 @@
+<br>
+
+<div class="ui-g ui-fluid">
+
+  <div class="ui-g-12 ui-md-3">
+    IMAGEN
+  </div>
+
+  <div class="ui-g-12 ui-md-6">
+    <form #loginForm="ngForm">
+      <div class="ui-g-12 ui-md-12">
+        <div class="ui-inputgroup">
+          <span class="ui-inputgroup-addon"><i class="pi pi-user" style="line-height: 1.25;"></i></span>
+          <input type="text" name="name" [(ngModel)]="nombres" pInputText style=" background: #ebebeb" readonly>
+        </div>
+      </div>
+
+      <div class="ui-g-12 ui-md-12">
+        <div class="ui-inputgroup">
+          <span class="ui-inputgroup-addon"><i class="pi pi-id-card" style="line-height: 1.25;"></i></span>
+          <input type="text" name="identificator" pInputText [(ngModel)]="identificator" style=" background: #ebebeb" readonly>
+        </div>
+      </div>
+
+      <div class="ui-g-12 ui-md-12">
+        <div class="ui-inputgroup">
+          <span class="ui-inputgroup-addon"><i class="pi pi-info" style="line-height: 1.25;"></i></span>
+          <input type="text" name="role" pInputText [(ngModel)]="role" style="background: #ebebeb" readonly>
+        </div>
+      </div>
+    </form>
+  </div>
+
+  <div class="ui-g-12 ui-md-3"></div>
+
+</div>
+
+<br>
+<hr>
+
+<div>
+  <p-megaMenu [model]="items"></p-megaMenu>
+</div>
+
+<hr>
+
+<router-outlet></router-outlet>

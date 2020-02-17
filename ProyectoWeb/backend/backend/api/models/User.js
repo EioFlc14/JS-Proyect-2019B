@@ -7,21 +7,22 @@
 
 module.exports = {
 
-  primaryKey: 'id',
-
-  attributes: {
-
-    id: {
-      type: 'number',
-      autoIncrement: true
-    },
+  // primaryKey: 'id',
+  //
+   attributes: {
+  //
+  //   id: {
+  //     type: 'number',
+  //     autoIncrement: true
+  //   },
     userIdentificator: {
       type: 'string',
       required: true
     },
     userUsername: {
       type: 'string',
-      required:true
+      required:true,
+      unique: true
     },
     userPassword: {
       type:'string',
@@ -39,6 +40,14 @@ module.exports = {
       type: 'string',
       required: true
     },
+     userPhone: {
+      type: 'string',
+       required: true
+     },
+     userEmail: {
+      type: 'string',
+       required: true,
+     },
     specialties:{
       collection: 'specialty',
       via: 'users'
@@ -47,9 +56,14 @@ module.exports = {
       collection: 'role',
       via:'users'
     },
-    medicalHistory:{
-      collection:'medicalHistory',
-      via: 'users'
+    medicalHistories: {
+      collection: 'MedicalHistory',
+      via: 'users',
+    },
+    medicalHistoriesMC:{
+      collection:'MedicalHistory',
+      via: 'doctorEncharged',
+      through: 'medicalCheck'
     }
 
   },
