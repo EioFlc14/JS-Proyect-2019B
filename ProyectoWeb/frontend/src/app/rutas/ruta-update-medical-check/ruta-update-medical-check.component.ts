@@ -5,6 +5,7 @@ import {MessageService} from "primeng";
 import {MedicalHistoryRestService} from "../../services/rest/medicalHistory.service";
 import {UserRestService} from "../../services/rest/user-rest.service";
 import {MedicalCheckRestService} from "../../services/rest/medicalCheck-rest.service";
+import {ArduinoService} from "../../services/rest/arduino.service";
 
 @Component({
   selector: 'app-ruta-update-medical-check',
@@ -27,6 +28,7 @@ export class RutaUpdateMedicalCheckComponent implements OnInit {
   idMedicalCheck: number;
 
   constructor(private readonly _activatedRoute: ActivatedRoute,
+              private readonly _arduinoService: ArduinoService,
               private readonly _medicalCheck: MedicalCheckRestService,
               private messageService: MessageService) { }
 
@@ -93,8 +95,24 @@ export class RutaUpdateMedicalCheckComponent implements OnInit {
 
   }
 
-  takeBloodPressure () {
-    //llamar funcion del arduino
-  }
+  takeBloodPressure() {
 
+    const pulsos$ = this._arduinoService.getBloodPressure();
+
+    pulsos$
+      .subscribe(
+        (bloods)=>{
+          let total = 0;
+          console.log('bloods:', bloods);
+          // @ts-ignore
+          for (let i = 0; i < bloods.length; i++) {
+            total = total + bloods[i].valor;
+          }
+          total = total/5;
+          this.medicalCheck.bloodPresure = Math.round(total);
+        }
+      );
+
+    //this.bloodPressure = 30; //llamar a la funcion del arduino
+  }
 }

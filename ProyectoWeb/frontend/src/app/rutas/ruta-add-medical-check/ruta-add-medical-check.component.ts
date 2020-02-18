@@ -112,9 +112,14 @@ export class RutaAddMedicalCheckComponent implements OnInit {
     pulsos$
       .subscribe(
         (bloods)=>{
-          //bloods tiene todos los json con el valor del pulso, es un arreglo y toca trabajar con un arreglo
-          //se debe extraer el json.valor y sumar todos esos con un reduce
-          //y luego ese valor se lo divide para 5 y eso le seteo en la pantalla
+          let total = 0;
+          console.log('bloods:', bloods);
+          // @ts-ignore
+          for (let i = 0; i < bloods.length; i++) {
+            total = total + bloods[i].valor;
+          }
+          total = total/5;
+          this.medicalCheck.bloodPresure = Math.round(total);
         }
       );
 

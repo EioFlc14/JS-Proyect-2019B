@@ -55,7 +55,7 @@ void loop()
     }
      
   ledFadeToBeat(); // Makes the LED Fade Effect Happen 
-  delay(5000); //  take a break
+  delay(2500); //  take a break
 }
 
 void ledFadeToBeat()

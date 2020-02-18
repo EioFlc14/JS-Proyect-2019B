@@ -104,7 +104,7 @@
         <div class="ui-g-8">
           <div class="ui-g-8">
             <input pInputText type="text" name="blood" pattern="([0-9])+" [(ngModel)]="medicalCheck.bloodPresure"
-                   #bloodPressureInput="ngModel"  required  />
+                   #bloodPressureInput="ngModel"  required readonly  />
           </div>
           <div class="ui-g-4">
             <button pButton type="button" name="buttonBlood" icon="pi pi-heart" style="margin-right: .5em; width: 195px; background-color: hotpink" (click)="takeBloodPressure()" ></button>

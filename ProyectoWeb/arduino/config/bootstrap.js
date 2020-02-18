@@ -24,14 +24,15 @@ mySerial.on('data', async function (data) {
 
   console.log('pulso:', pulso);
 
-  respuestaHTTP = await axios
-    .post(
-      "http://localhost:1338/pulso",
-      {
-        valor: pulso,
-      }
-
-    );
+  if (pulso > 0) {
+    respuestaHTTP = await axios
+      .post(
+        "http://localhost:1338/pulso",
+        {
+          valor: pulso,
+        }
+      );
+  }
 
 });
 
@@ -40,8 +41,7 @@ mySerial.on('err', function (err) {
 });
 
 
-module.exports.bootstrap = async function() {
-
+module.exports.bootstrap = async function () {
 
 
 };
