@@ -23,7 +23,7 @@
   <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
   <component name="PropertiesComponent">
     <property name="WebServerToolWindowFactoryState" value="false" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/ProyectoWeb" />
     <property name="nodejs_package_manager_path" value="npm" />
     <property name="ts.external.directory.path" value="D:\GitHub\JS-Proyect-2019B\ProyectoWeb\frontend\node_modules\typescript\lib" />
   </component>
@@ -64,6 +64,8 @@
       <workItem from="1581952845633" duration="8753000" />
       <workItem from="1581969636502" duration="10930000" />
       <workItem from="1581991470452" duration="3830000" />
+      <workItem from="1582032331154" duration="7675000" />
+      <workItem from="1582048845923" duration="3722000" />
     </task>
     <servers />
   </component>

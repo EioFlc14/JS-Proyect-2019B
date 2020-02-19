@@ -113,6 +113,5 @@ export class RutaUpdateMedicalCheckComponent implements OnInit {
         }
       );
 
-    //this.bloodPressure = 30; //llamar a la funcion del arduino
   }
 }

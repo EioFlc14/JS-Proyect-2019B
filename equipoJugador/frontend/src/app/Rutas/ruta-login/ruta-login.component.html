@@ -1,0 +1,52 @@
+
+<div>
+  <img src="https://media.e-subsidesports.com/sites/us/media/catalog/category/TeamHeader-ASRoma.jpg"
+       alt="ImagenRoma" style="width:100%; height: 500px;">
+</div>
+
+<br>
+<br>
+<br>
+
+<div class="ui-g ui-fluid">
+
+  <div class="ui-g-12 ui-md-3"></div>
+
+  <div class="ui-g-12 ui-md-8">
+
+    <div class="ui-g-12 ui-md-8">
+      <div class="ui-inputgroup">
+        <span class="ui-inputgroup-addon"
+              style="width: 110px; background-color: firebrick; font-weight: bolder; color: #ffffff ">USERNAME: </span>
+        <input type="text" id="username" pInputText  [(ngModel)]="username">
+      </div>
+    </div>
+
+    <div class="ui-g-12 ui-md-8">
+      <div class="ui-inputgroup">
+        <span class="ui-inputgroup-addon"
+              style="width: 110px; background-color: firebrick; font-weight: bolder; color: #ffffff ">PASSWORD: </span>
+        <input type="password" id="password" pInputText [(ngModel)]="password" >
+      </div>
+    </div>
+
+    <div class="ui-g-12 ui-md-8">
+
+      <div class="ui-g-12 ui-md-3"></div>
+
+      <div class="ui-g-12 ui-md-6">
+        <button pButton type="button"
+                style="background-color: firebrick; font-weight: bolder; color: #ffffff " label="LOGIN"  (click)="validate()" >
+        </button>
+      </div>
+
+      <div class="ui-g-12 ui-md-3"></div>
+
+    </div>
+
+  </div>
+
+  <p-toast key="myKey1" position="bottom-left"  ></p-toast>
+
+</div>
+

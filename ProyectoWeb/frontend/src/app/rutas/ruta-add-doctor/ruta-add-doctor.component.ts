@@ -79,7 +79,7 @@ export class RutaAddDoctorComponent implements OnInit {
         (error)=>{
           this.messageService.add({key: 'myKey1', severity:'error', summary: 'Failed Action'});
         }
-        )
+        );
 
   }
 

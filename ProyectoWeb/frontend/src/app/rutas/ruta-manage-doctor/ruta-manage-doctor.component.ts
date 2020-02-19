@@ -43,7 +43,7 @@ export class RutaManageDoctorComponent implements OnInit {
           //console.log('doctors', this.doctors);
         },
         () => {
-          this.messageService.add({key: 'myKey1', severity: 'success', summary: 'Error getting doctors'});
+          this.messageService.add({key: 'myKey1', severity: 'error', summary: 'Error getting doctors'});
         }
       );
 

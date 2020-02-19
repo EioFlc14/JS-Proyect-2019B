@@ -1,0 +1,240 @@
+<div class="ui-fluid">
+
+  <h1 style="text-align: center; color: firebrick "> ACTUALIZAR CARRITO </h1>
+  <form #cabCarritoForm="ngForm">
+    <!--    <div class="ui-g-12 ui-md-3"></div>-->
+
+    <div class="ui-g-12 ui-md-12"  id="cabCarritoGeneral" >
+
+      <div class="ui-g-12 ui-md-12">
+        <div class="ui-g-1">
+          Direccion:
+        </div>
+        <div class="ui-g-11">
+          <input pInputText type="text" id="direccion" name="direccion" [(ngModel)]="cabCarrito.direccion" #direccionInput="ngModel" required/>
+        </div>
+      </div>
+
+      <div *ngIf="direccionInput.touched && direccionInput.dirty">
+        <p *ngIf="direccionInput.errors?.required " style="color: red">
+          This field is required.
+        </p>
+
+      </div>
+
+      <div class="ui-g-12 ui-md-4">
+        <div class="ui-g-3">
+          Fecha:
+        </div>
+        <div class="ui-g-9"  >
+          <p-calendar name="fecha" id="fecha"  [(ngModel)]="cabCarrito.fecha" #fechaInput="ngModel" required readonly> </p-calendar>
+        </div>
+      </div>
+
+      <div *ngIf="fechaInput.touched && fechaInput.dirty">
+        <p *ngIf="fechaInput.errors?.required " style="color: red">
+          This field is required.
+        </p>
+
+      </div>
+
+
+      <div class="ui-g-12 ui-md-4">
+        <div class="ui-g-3">
+          Total:
+        </div>
+        <div class="ui-g-9">
+          <input pInputText type="text" name="total" [(ngModel)]="cabCarrito.total" #totalInput="ngModel" required readonly/>
+        </div>
+      </div>
+
+      <div *ngIf="totalInput.touched && totalInput.dirty">
+        <p *ngIf="totalInput.errors?.required " style="color: red">
+          This field is required.
+        </p>
+
+      </div>
+
+      <div class="ui-g-12 ui-md-4">
+        <div class="ui-g-3">
+          Estado:
+        </div>
+        <div class="ui-g-9">
+          <input pInputText type="text" name="estado" [(ngModel)]="cabCarrito.estado" #estadoInput="ngModel" readonly/>
+        </div>
+      </div>
+
+
+      <div class="ui-g-12 ui-md-12">
+        <div class="ui-g-12">
+          <button pButton id="crearButton" name="actualizarButton" label="ACTUALIZAR CABECERA CARRITO" type="button" style="background-color: firebrick"
+                  [disabled]="!cabCarritoForm.valid" (click)="actualizarCarrito()"></button>
+        </div>
+      </div>
+
+      <p-toast key="myKey1" position="bottom-left"></p-toast>
+
+
+    </div>
+
+  </form>
+
+  <hr style="text-align: center; color: firebrick ">
+
+  <div class="ui-g-12 ui-md-12" id="addAcarrito" style="display: block">
+
+    <form #detCarritoForm="ngForm">
+
+      <div class="ui-g-12 ui-md-12" >
+
+        <div class="ui-g-3">
+          <h3 style="text-align: right; color: firebrick "> Total A Comprar </h3>
+        </div>
+        <div class="ui-g-6">
+          <input pInputText type="text" name="totalAcomprar" [(ngModel)]="totalAcomprar" #totalAcomprarInput="ngModel" required readonly/>
+        </div>
+
+
+        <div *ngIf="totalAcomprarInput.touched && totalAcomprarInput.dirty">
+          <p *ngIf="totalAcomprarInput.errors?.required " style="color: red">
+            This field is required.
+          </p>
+        </div>
+
+        <div class="ui-g-12 ui-md-3">
+          <button pButton name="addButton" label="ACTUALIZAR COMPRA" type="button" style="background-color: firebrick"
+                  [disabled]="validarTotalaComprar()"
+                  (click)="actualizarCarrito()"
+                  ></button>
+        </div>
+
+      </div>
+
+      <h3 style="text-align: center; color: firebrick "> JUGADORES COMPRADOS </h3>
+
+
+<!--      <div class="ui-g-12 ui-md-3">-->
+<!--        <div class="ui-g-4">-->
+<!--          Jugador:-->
+<!--        </div>-->
+<!--        <div class="ui-g-8">-->
+<!--          <p-dropdown name="jugador" [options]="jugadorDropDown" [(ngModel)]="jugador"-->
+<!--                      placeholder="Seleccione el jugador"-->
+<!--                      optionLabel="nombre" #jugadorInput="ngModel" (onChange)="setearPrecio()" required></p-dropdown>-->
+<!--        </div>-->
+<!--      </div>-->
+
+<!--      <div *ngIf="jugadorInput.touched && jugadorInput.dirty">-->
+<!--        <p *ngIf="jugadorInput.errors?.required " style="color: red">-->
+<!--          This field is required.-->
+<!--        </p>-->
+<!--      </div>-->
+
+
+<!--      <div class="ui-g-12 ui-md-2">-->
+<!--        <div class="ui-g-3">-->
+<!--          Precio:-->
+<!--        </div>-->
+<!--        <div class="ui-g-9">-->
+<!--          <input pInputText type="text" name="precio" [(ngModel)]="detCarritoUnitario.precio" #precioInput="ngModel"-->
+<!--                 required readonly/>-->
+<!--        </div>-->
+<!--      </div>-->
+
+<!--      <div *ngIf="precioInput.touched && precioInput.dirty">-->
+<!--        <p *ngIf="precioInput.errors?.required " style="color: red">-->
+<!--          This field is required.-->
+<!--        </p>-->
+
+<!--      </div>-->
+
+<!--      <div class="ui-g-12 ui-md-2">-->
+<!--        <div class="ui-g-3">-->
+<!--          Cantidad:-->
+<!--        </div>-->
+<!--        <div class="ui-g-9">-->
+<!--          <input pInputText type="number" name="cantidad" [(ngModel)]="detCarritoUnitario.cantidad"-->
+<!--                 #cantidadInput="ngModel" (blur)="setearSubtotal()" required/>-->
+<!--        </div>-->
+<!--      </div>-->
+
+<!--      <div *ngIf="cantidadInput.touched && cantidadInput.dirty">-->
+<!--        <p *ngIf="cantidadInput.errors?.required " style="color: red">-->
+<!--          This field is required.-->
+<!--        </p>-->
+
+<!--        <p *ngIf="cantidadInput.errors?.pattern" style="color: red">-->
+<!--          Numeric Field.-->
+<!--        </p>-->
+
+<!--        <p *ngIf="cantidadInput.errors?.min" style="color: red">-->
+<!--          Debe ser mayor que 0-->
+<!--        </p>-->
+
+<!--      </div>-->
+
+<!--      <div class="ui-g-12 ui-md-2">-->
+<!--        <div class="ui-g-3">-->
+<!--          Subtotal:-->
+<!--        </div>-->
+<!--        <div class="ui-g-9">-->
+<!--          <input pInputText type="text" name="subtotal" [(ngModel)]="detCarritoUnitario.subtotal"-->
+<!--                 #subtotalInput="ngModel" required readonly/>-->
+<!--        </div>-->
+<!--      </div>-->
+
+<!--      <div *ngIf="subtotalInput.touched && subtotalInput.dirty">-->
+<!--        <p *ngIf="subtotalInput.errors?.required " style="color: red">-->
+<!--          This field is required.-->
+<!--        </p>-->
+
+<!--      </div>-->
+
+<!--      <div class="ui-g-12 ui-md-3">-->
+<!--        <div class="ui-g-12">-->
+<!--          <button pButton name="addButton" label="AÑADIR" type="button" style="background-color: firebrick"-->
+<!--                  [disabled]="!detCarritoForm.valid || validarCantidad() || validarSubtotal() "-->
+<!--                  (click)="addACarrito()"></button>-->
+<!--        </div>-->
+<!--      </div>-->
+
+    </form>
+
+    <hr style="text-align: center; color: firebrick ">
+
+    <br>
+
+    <p-table [value]="listaDelCarrito()"
+             [paginator]="true"
+             [rows]="ROWS">
+      <ng-template pTemplate="caption">
+        Lista del Carrito
+      </ng-template>
+      <ng-template pTemplate="header">
+        <tr>
+          <th>Jugador</th>
+          <th>Cantidad</th>
+          <th>Precio</th>
+          <th>Subtotal</th>
+          <th>Acciones</th>
+        </tr>
+      </ng-template>
+      <ng-template pTemplate="body" let-carrito>
+        <tr>
+          <td>{{carrito.jugador.nombre}} {{carrito.jugador.apellido}}</td>
+          <td>{{carrito.cantidad}}</td>
+          <td>{{carrito.precio}}</td>
+          <td>{{carrito.subtotal}}</td>
+          <td>
+            <button pButton type="button" class="ui-button-danger" icon="pi pi-trash" style="margin-right: .5em;"
+                    (click)="eliminarDeCarrito(carrito.jugador.id, carrito.subtotal)"></button>
+          </td>
+        </tr>
+      </ng-template>
+    </p-table>
+
+  </div>
+
+</div>
+
+<p-toast key="myKey1" position="bottom-left"></p-toast>

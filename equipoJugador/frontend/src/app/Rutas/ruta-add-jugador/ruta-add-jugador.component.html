@@ -1,0 +1,147 @@
+<div class="ui-fluid">
+
+  <h1 style="text-align: center; color: firebrick "> CREAR JUGADOR </h1>
+  <form #jugadorForm="ngForm">
+    <div class="ui-g-12 ui-md-3"></div>
+
+    <div class="ui-g-12 ui-md-6">
+
+      <div class="ui-g-12 ui-md-12">
+        <div class="ui-g-4">
+          Nombre:
+        </div>
+        <div class="ui-g-8">
+          <input pInputText type="text" name="nombre" pattern="[a-zA-ZÀ-ÿ\u00f1\u00d1]{1}[a-zA-ZÀ-ÿ\u00f1\u00d1\s]*"
+                 [(ngModel)]="jugador.nombre" #nombreInput="ngModel" required/>
+        </div>
+      </div>
+
+      <div *ngIf="nombreInput.touched && nombreInput.dirty">
+        <p *ngIf="nombreInput.errors?.required " style="color: red">
+          This field is required.
+        </p>
+
+        <p *ngIf="nombreInput.errors?.pattern" style="color: red">
+          Letters Field.
+        </p>
+
+      </div>
+
+
+      <div class="ui-g-12 ui-md-12">
+        <div class="ui-g-4">
+          Apellido:
+        </div>
+        <div class="ui-g-8">
+          <input pInputText type="text" name="apellido" pattern="[a-zA-ZÀ-ÿ\u00f1\u00d1]{1}[a-zA-ZÀ-ÿ\u00f1\u00d1\s]*"
+                 [(ngModel)]="jugador.apellido" #apellidoInput="ngModel" required/>
+        </div>
+      </div>
+
+      <div *ngIf="apellidoInput.touched && apellidoInput.dirty">
+        <p *ngIf="apellidoInput.errors?.required " style="color: red">
+          This field is required.
+        </p>
+
+        <p *ngIf="apellidoInput.errors?.pattern" style="color: red">
+          Letters Field.
+        </p>
+      </div>
+
+
+      <div class="ui-g-12 ui-md-12">
+        <div class="ui-g-4">
+          Edad:
+        </div>
+        <div class="ui-g-8">
+          <input pInputText type="text" name="edad" pattern="([0-9])+" [(ngModel)]="jugador.edad" #edadInput="ngModel"
+                 required/>
+        </div>
+      </div>
+
+      <div *ngIf="edadInput.touched && edadInput.dirty">
+        <p *ngIf="edadInput.errors?.required " style="color: red">
+          This field is required.
+        </p>
+
+        <p *ngIf="edadInput.errors?.pattern" style="color: red">
+          Numeric Field.
+        </p>
+      </div>
+
+      <div class="ui-g-12 ui-md-12">
+        <div class="ui-g-4">
+          Precio:
+        </div>
+        <div class="ui-g-8">
+          <input pInputText type="text" name="precio" pattern="([0-9])+" [(ngModel)]="jugador.precio" #precioInput="ngModel"
+                 required/>
+        </div>
+      </div>
+
+      <div *ngIf="precioInput.touched && precioInput.dirty">
+        <p *ngIf="precioInput.errors?.required " style="color: red">
+          This field is required.
+        </p>
+
+        <p *ngIf="precioInput.errors?.pattern" style="color: red">
+          Numeric Field.
+        </p>
+      </div>
+
+
+      <div class="ui-g-12 ui-md-12">
+        <div class="ui-g-4">
+          Nacionalidad:
+        </div>
+        <div class="ui-g-8">
+          <input pInputText type="text" name="estadio" [(ngModel)]="jugador.nacionalidad"
+                 pattern="[a-zA-ZÀ-ÿ\u00f1\u00d1]{1}[a-zA-ZÀ-ÿ\u00f1\u00d1\s]*" #nacionalidadInput="ngModel" required/>
+        </div>
+      </div>
+
+      <div *ngIf="nacionalidadInput.touched && nacionalidadInput.dirty">
+        <p *ngIf="nacionalidadInput.errors?.required " style="color: red">
+          This field is required.
+        </p>
+
+        <p *ngIf="nacionalidadInput.errors?.pattern" style="color: red">
+          Letters Field.
+        </p>
+
+      </div>
+
+      <div class="ui-g-12 ui-md-12">
+        <div class="ui-g-4">
+          Equipo:
+        </div>
+        <div class="ui-g-8">
+          <p-dropdown name="equipo" [options]="equipoDropDown" [(ngModel)]="equipo" placeholder="Seleccione el equipo"
+                      optionLabel="nombre" #equipoInput="ngModel" required></p-dropdown>
+        </div>
+      </div>
+
+      <div *ngIf="equipoInput.touched && equipoInput.dirty">
+        <p *ngIf="equipoInput.errors?.required " style="color: red">
+          This field is required.
+        </p>
+
+      </div>
+
+
+      <div class="ui-g-12 ui-md-12">
+        <div class="ui-g-12">
+          <button pButton name="addButton" label="CREAR" type="button" style="background-color: firebrick"
+                  [disabled]="!jugadorForm.valid" (click)="crearJugador()"></button>
+        </div>
+      </div>
+
+      <p-toast key="myKey1" position="bottom-left"></p-toast>
+
+
+    </div>
+
+    <div class="ui-g-12 ui-md-3"></div>
+  </form>
+</div>
+

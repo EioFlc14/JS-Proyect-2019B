@@ -1,0 +1,57 @@
+<div class="ui-fluid">
+
+  <h1 style="text-align: center; color: firebrick "> ACTUALIZAR EQUIPO </h1>
+  <form #equipoForm="ngForm" >
+    <div class="ui-g-12 ui-md-3"></div>
+
+    <div class="ui-g-12 ui-md-6">
+
+      <div class="ui-g-12 ui-md-12">
+        <div class="ui-g-4">
+          Nombre:
+        </div>
+        <div class="ui-g-8">
+          <input pInputText type="text" name="nombre" [(ngModel)]="equipo.nombre" #nombreInput="ngModel" required readonly/>
+        </div>
+      </div>
+
+      <div *ngIf="nombreInput.touched && nombreInput.dirty">
+        <p *ngIf="nombreInput.errors?.required " style="color: red">
+          This field is required.
+        </p>
+
+      </div>
+
+
+      <div class="ui-g-12 ui-md-12">
+        <div class="ui-g-4">
+          Estadio:
+        </div>
+        <div class="ui-g-8">
+          <input pInputText type="text" name="estadio" [(ngModel)]="equipo.estadio" #estadioInput="ngModel" required />
+        </div>
+      </div>
+
+      <div *ngIf="estadioInput.touched && estadioInput.dirty">
+        <p *ngIf="estadioInput.errors?.required " style="color: red">
+          This field is required.
+        </p>
+
+      </div>
+
+
+      <div class="ui-g-12 ui-md-12">
+        <div class="ui-g-12">
+          <button pButton name="actualizarButton" label="ACTUALIZAR" type="button" style="background-color: firebrick" [disabled]="!equipoForm.valid"  (click)="actualizarEquipo()" > </button>
+        </div>
+      </div>
+
+      <p-toast key="myKey1" position="bottom-left"  ></p-toast>
+
+
+    </div>
+
+    <div class="ui-g-12 ui-md-3"></div>
+  </form>
+</div>
+

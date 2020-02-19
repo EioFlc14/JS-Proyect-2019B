@@ -1,0 +1,68 @@
+import { Component, OnInit } from '@angular/core';
+import {ROWSNUMBER} from "../../Constantes/constants";
+import {JugadorService} from "../../Services/rest/jugador.service";
+import {MessageService} from "primeng";
+
+@Component({
+  selector: 'app-ruta-gestionar-jugador',
+  templateUrl: './ruta-gestionar-jugador.component.html',
+  styleUrls: ['./ruta-gestionar-jugador.component.scss']
+})
+export class RutaGestionarJugadorComponent implements OnInit {
+
+  ROWS = ROWSNUMBER;
+  jugadores = [];
+
+  filteredNumero = '';
+  filteredNombre = '';
+  filteredNacionalidad = '';
+  filteredEquipo = '';
+
+  constructor(
+    private readonly _jugadorService: JugadorService,
+    private messageService: MessageService,
+  ) { }
+
+  ngOnInit(): void {
+
+    const jugadores$ = this._jugadorService.getAll();
+
+    jugadores$
+      .subscribe(
+        (jg : any[])=>{
+          this.jugadores = jg;
+          console.log('Jugadores:', this.jugadores);
+        },
+        ()=>{
+          this.messageService.add({key: 'myKey1', severity: 'error', summary: 'Error al obtener jugadores'});
+        }
+      );
+
+  }
+
+  jugadoresFiltrados(){
+    return this.jugadores.filter(
+      (jugador) => {
+        return jugador.id.toString().includes(this.filteredNumero.toLowerCase());
+      }
+    ).filter(
+      (jugador) => {
+        return jugador.nombre.toLowerCase().includes(this.filteredNombre.toLowerCase());
+      }
+    ).filter(
+      (jugador) => {
+        return jugador.nacionalidad.toLowerCase().includes(this.filteredNacionalidad.toLowerCase());
+      }
+    ).filter(
+      (jugador) => {
+        return jugador.equipo.nombre.toString().toLowerCase().includes(this.filteredEquipo.toLowerCase());
+      }
+    );
+
+  }
+
+  eliminar(id){
+
+  }
+
+}

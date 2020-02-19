@@ -8,3 +8,8 @@ EN CASO DE TENER TIEMPO:
 	- Una imagen en la principal de esas que pasan después de un tiempo
 	- VALLIDAR EL PESO MAYOR QUE 0 CUANDO SE REGISTRA UN MEDICAL CHECK
 	- VALIDAR QUE LAS FECHAS SEAN MAYORES Y OTROS MENORES (noción del tiempo)
+
+EXAMEN
+
+	- No controlar lo de las referencias al eliminar (toca ver las formas de eliminar cuando tiene registros en detcabecera)
+	- crud de usuario sin importar el rol
