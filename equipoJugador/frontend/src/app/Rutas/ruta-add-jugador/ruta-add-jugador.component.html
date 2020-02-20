@@ -132,7 +132,7 @@
       <div class="ui-g-12 ui-md-12">
         <div class="ui-g-12">
           <button pButton name="addButton" label="CREAR" type="button" style="background-color: firebrick"
-                  [disabled]="!jugadorForm.valid" (click)="crearJugador()"></button>
+                  [disabled]="!jugadorForm.valid || validarPrecio()" (click)="crearJugador()"></button>
         </div>
       </div>
 

@@ -14,6 +14,9 @@ import {RutaGestionarCarritoComponent} from "./Rutas/ruta-gestionar-carrito/ruta
 import {RutaAddUsuarioComponent} from "./Rutas/ruta-add-usuario/ruta-add-usuario.component";
 import {RutaActualizarUsuarioComponent} from "./Rutas/ruta-actualizar-usuario/ruta-actualizar-usuario.component";
 import {RutaGestionarUsuarioComponent} from "./Rutas/ruta-gestionar-usuario/ruta-gestionar-usuario.component";
+import {EstaLogeadoPolicy} from "./Services/auth/policies/estaLogeado.policy";
+import {EsAdministradorPolicy} from "./Services/auth/policies/esAdministrador.policy";
+import {EsUsuarioPolicy} from "./Services/auth/policies/esUsuario.policy";
 
 
 const routes: Routes = [
@@ -24,72 +27,72 @@ const routes: Routes = [
   {
     path: 'login/principal',
     component: RutaPrincipalComponent,
-    // canActivate: [
-    //   EstaLogeadoPolicy,
-    // ],
+    canActivate: [
+      EstaLogeadoPolicy,
+    ],
     children: [
       {
         path: 'addEquipo',
         component: RutaAddEquipoComponent,
-        // canActivate: [
-        //   AddDoctorPolicy,
-        // ],
+        canActivate: [
+          EsAdministradorPolicy,
+        ],
       },
       {
         path: 'gestionarEquipo',
         component: RutaGestionarEquipoComponent,
-        // canActivate: [
-        //   ManageDoctorPolicy,
-        // ],
+        canActivate: [
+          EsAdministradorPolicy,
+        ],
       },
       {
         path: 'actualizarEquipo/:idEquipo',
         component: RutaActualizarEquipoComponent,
-        // canActivate: [
-        //   UpdateDoctorPolicy,
-        // ],
+        canActivate: [
+          EsAdministradorPolicy,
+        ],
       },
       {
         path: 'addJugador',
         component: RutaAddJugadorComponent,
-        // canActivate: [
-        //   AddPatientPolicy,
-        // ],
+        canActivate: [
+          EsAdministradorPolicy,
+        ],
       },
       {
         path: 'gestionarJugador',
         component: RutaGestionarJugadorComponent,
-        // canActivate: [
-        //   ManagePatientPolicy,
-        // ],
+        canActivate: [
+          EsAdministradorPolicy,
+        ],
       },
       {
         path: 'actualizarJugador/:idJugador',
         component: RutaActualizarJugadorComponent,
-        // canActivate: [
-        //   UpdatePatientPolicy,
-        // ],
+        canActivate: [
+          EsAdministradorPolicy,
+        ],
       },
       {
         path: 'addCarrito',
         component: RutaAddCarritoComponent,
-        // canActivate: [
-        //   AddMedicalCheckPolicy,
-        // ],
+        canActivate: [
+          EsUsuarioPolicy,
+        ],
       },
       {
         path: 'gestionarCarrito',
         component: RutaGestionarCarritoComponent,
-        // canActivate: [
-        //   ManageMedicalCheckPolicy,
-        // ],
+        canActivate: [
+          EsUsuarioPolicy,
+        ],
       },
       {
         path: 'actualizarCarrito/:idCarrito',
         component: RutaActualizarCarritoComponent,
-        // canActivate: [
-        //   UpdateMedicalCheckPolicy,
-        // ],
+        canActivate: [
+          EsUsuarioPolicy,
+        ],
       },
       {
         path: 'addUsuario',

@@ -62,8 +62,17 @@ export class RutaAddCarritoComponent implements OnInit {
     jugadores$
       .subscribe(
         (jugadores: Jugador) => {
-          //console.log('Jugador:', jugadores);
+
           this.jugadorDropDown = jugadores;
+          console.log('jugadores en dropdown:', this.jugadorDropDown);
+          // // @ts-ignore
+          // for (let i = 0; i < jugadores.length; i++) {
+          //   if(jugadores[i].equipo != null){
+          //     // @ts-ignore
+          //     this.jugadorDropDown.push(jugadores[i]);
+          //   }
+          // }
+
         },
         () => {
           this.messageService.add({key: 'myKey1', severity: 'error', summary: 'Error al consultar los jugadores'});
@@ -118,7 +127,6 @@ export class RutaAddCarritoComponent implements OnInit {
 
   validarCantidad() {
     return this.detCarritoUnitario.cantidad <= 0;
-
   }
 
   validarSubtotal() {

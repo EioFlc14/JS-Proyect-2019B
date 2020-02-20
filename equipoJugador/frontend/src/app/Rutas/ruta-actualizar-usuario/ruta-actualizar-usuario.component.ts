@@ -1,7 +1,5 @@
 import { Component, OnInit } from '@angular/core';
 import {ActivatedRoute} from "@angular/router";
-import {JugadorService} from "../../Services/rest/jugador.service";
-import {EquipoService} from "../../Services/rest/equipo.service";
 import {MessageService} from "primeng";
 import {UsuarioService} from "../../Services/rest/usuario.service";
 
@@ -27,7 +25,7 @@ export class RutaActualizarUsuarioComponent implements OnInit {
 
   idUsuario;
   roles: Rol[];
-  selectedRol: Rol;
+  selectedRol: string;
 
   constructor(    private readonly _activatedRoute: ActivatedRoute,
                   private readonly _usuarioService: UsuarioService,
@@ -52,7 +50,7 @@ export class RutaActualizarUsuarioComponent implements OnInit {
           usuario$
             .subscribe(
               (usuarioEncontrado: any[]) => {
-                console.log('Equipo encontrado:', usuarioEncontrado);
+                console.log('Usuario encontrado:', usuarioEncontrado);
                 this.usuario.nombre = usuarioEncontrado[0].nombre;
                 this.usuario.apellido = usuarioEncontrado[0].apellido;
                 this.usuario.username = usuarioEncontrado[0].username;
@@ -73,11 +71,13 @@ export class RutaActualizarUsuarioComponent implements OnInit {
 
   actualizarUsuario(){
 
+
     let nuevoUsuario = {
       "username": this.usuario.username,
       "password": this.usuario.password,
+      // @ts-ignore
       "rol": this.selectedRol.nombre,
-    }
+    };
 
     const usuarioNuevo$ = this._usuarioService.actualizar(this.idUsuario, nuevoUsuario);
 

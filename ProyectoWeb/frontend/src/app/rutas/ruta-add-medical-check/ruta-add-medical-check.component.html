@@ -148,7 +148,7 @@
       <div class="ui-g-12 ui-md-12">
         <div class="ui-g-12">
           <button pButton name="addButton" label="ADD" type="button" style="background-color: hotpink"
-                  [disabled]="!medicalCheckForm.valid" (click)="addMedicalCheck()" ></button>
+                  [disabled]="!medicalCheckForm.valid || validateWeight() " (click)="addMedicalCheck()" ></button>
         </div>
       </div>
 

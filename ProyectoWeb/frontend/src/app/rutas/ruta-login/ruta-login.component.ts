@@ -54,7 +54,7 @@ export class RutaLoginComponent implements OnInit {
                 this._authService.manageMedicalCheck = true;
 
               } else {
-                if (this._authService.dataSesion.roles[0].id == 3) {
+                if (this._authService.dataSesion.roles[0].id == 3) { // paciente
 
                   this._authService.addPatient = true;
                   this._authService.managePatient = true;

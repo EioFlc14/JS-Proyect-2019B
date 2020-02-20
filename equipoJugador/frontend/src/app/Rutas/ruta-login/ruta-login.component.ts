@@ -37,24 +37,21 @@ export class RutaLoginComponent implements OnInit {
             console.log('data sesion:', this._authService.dataSesion);
 
             if (this._authService.dataSesion.rol === "Administrador") {
-
-
+              this._authService.esAdministrador = true;
 
             } else {
               if (this._authService.dataSesion.rol === "Usuario") {
-
-
-
+                this._authService.esUsuario = true;
               }
             }
 
-           // this.router.navigate(['login/principal']);
+            this.router.navigate(['login/principal']);
           } else {
             this.messageService.add({key: 'myKey1', severity: 'error', summary: 'Usuario No Registrado'});
           }
         },
-        (error) => {
-          console.log('Error:', error);
+        () => {
+          this.messageService.add({key: 'myKey1', severity: 'error', summary: 'Error en la conexión'});
         }
       );
 

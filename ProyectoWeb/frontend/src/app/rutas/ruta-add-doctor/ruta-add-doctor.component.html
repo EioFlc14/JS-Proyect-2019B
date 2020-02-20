@@ -123,13 +123,17 @@
         E-mail:
       </div>
       <div class="ui-g-8">
-        <input pInputText type="email" name="email" [(ngModel)]="doctor.userEmail" #emailInput="ngModel" required />
+        <input pInputText type="email"  pattern="^[a-zA-Z0-9.!#$%&'*+/=?^_`{|}~-]+@[a-zA-Z0-9-]+(?:\.[a-zA-Z0-9-]+)*$" name="email" [(ngModel)]="doctor.userEmail" #emailInput="ngModel" required />
       </div>
     </div>
 
     <div *ngIf="emailInput.touched && emailInput.dirty">
       <p *ngIf="emailInput.errors?.required " style="color: red">
         This field is required.
+      </p>
+
+      <p *ngIf="emailInput.errors?.pattern" style="color: red">
+        Email Invalid.
       </p>
 
     </div>

@@ -34,11 +34,18 @@ export class UsuarioService {
   }
 
   actualizar(id: number, data): Observable<any>{
+    console.log('data a actualizar:', data);
     const url = this.url + '/' + id;
-    return this._httpClient.put(
+    return this._httpClient.patch(
       url,
       data
     );
   }
+
+  eliminar(id: number){
+    const url = this.url + '/' + id;
+    return this._httpClient.delete(url);
+  }
+
 
 }

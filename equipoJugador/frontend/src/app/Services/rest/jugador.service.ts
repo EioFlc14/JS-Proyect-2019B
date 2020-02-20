@@ -41,4 +41,9 @@ export class JugadorService {
     return this._httpClient.get(this.url);
   }
 
+  eliminar(id: number){
+    const url = this.url + '/' + id;
+    return this._httpClient.delete(url);
+  }
+
 }

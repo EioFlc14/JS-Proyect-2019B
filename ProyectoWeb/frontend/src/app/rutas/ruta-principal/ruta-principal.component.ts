@@ -14,10 +14,16 @@ export class RutaPrincipalComponent implements OnInit {
   nombres: string;
   identificator: string;
   role: string;
+  images: any[];
 
   constructor(private readonly _authService: AuthService) { }
 
   ngOnInit(): void {
+
+    this.images = [];
+    this.images.push({source:'https://www.elcomercio.com/files/article_main/uploads/2018/06/11/5b1f06ad40f68.jpeg'});
+    this.images.push({source:'https://clustersalud.americaeconomia.com/sites/clustersalud.americaeconomia.com/files/styles/article_main/public/hospital-ward-1338585_1920.jpg?itok=GZn3qQhG'});
+    this.images.push({source:'https://www.makiber.com/wp-content/uploads/2017/06/hospital-manta-01-1070x600.jpg'});
 
     if(this._authService.estaLogeado === true ){
       console.log(this._authService.dataSesion);

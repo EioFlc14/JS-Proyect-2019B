@@ -151,5 +151,28 @@ export class RutaActualizarCarritoComponent implements OnInit {
     //console.log('originales:', this.originales);
   }
 
+  actualizarCabeceraCarrito(){
+
+    let nuevaCabeceraCarrito = {
+      "direccion": this.cabCarrito.direccion,
+    };
+
+    console.log('nuevo jugador:', nuevaCabeceraCarrito);
+
+    const jugadorNuevo$ = this._cabCarrito.actualizar(this.idCabCarrito, nuevaCabeceraCarrito);
+
+    jugadorNuevo$
+      .subscribe(
+        ()=>{
+          this.messageService.add({key: 'myKey1', severity:'success', summary: 'Cabecera del Carrito Actualizada'});
+        },
+        ()=>{
+          this.messageService.add({key: 'myKey1', severity:'error', summary: 'Error al Actualizar'});
+        }
+
+      );
+
+  }
+
 
 }

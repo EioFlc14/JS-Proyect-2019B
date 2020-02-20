@@ -23,7 +23,7 @@ export class RutaAddJugadorComponent implements OnInit {
     "apellido": '',
     "edad": '',
     "nacionalidad": '',
-    "precio": '',
+    "precio": 0,
   };
 
   constructor(private messageService: MessageService,
@@ -69,4 +69,7 @@ export class RutaAddJugadorComponent implements OnInit {
 
   }
 
+  validarPrecio() {
+    return this.jugador.precio <= 0;
+  }
 }

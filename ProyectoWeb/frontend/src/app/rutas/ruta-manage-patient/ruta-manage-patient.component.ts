@@ -37,7 +37,7 @@ export class RutaManagePatientComponent implements OnInit {
       .subscribe(
         (patients: any[]) => {
           this.patients = patients;
-          //console.log('patients', this.patients);
+          console.log('patients', this.patients);
         },
         () => {
           this.messageService.add({key: 'myKey1', severity: 'success', summary: 'Error getting doctors'});

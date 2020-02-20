@@ -10,14 +10,10 @@ import {environment} from "../../../environments/environment";
 export class AuthService {
 
   estaLogeado = false;
-  dataSesion = {
-    "id": 1,
-    "nombre": 'Edison',
-    "apellido": 'Sanango',
-    "username": '12345',
-    "password": '123',
-    "rol": 'administrador'
-  };
+  esAdministrador = false;
+  esUsuario = false;
+
+  dataSesion;
 
 
   constructor(private readonly httpClient: HttpClient) {

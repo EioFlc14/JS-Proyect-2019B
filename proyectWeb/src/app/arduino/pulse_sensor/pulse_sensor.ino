@@ -1,4 +1,4 @@
- #include <LiquidCrystal.h>
+#include <LiquidCrystal.h>
 
 //  Variables
 int pulsePin = 0;                 // Pulse Sensor purple wire connected to analog pin 0

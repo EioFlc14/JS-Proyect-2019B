@@ -156,5 +156,8 @@ export class RutaAddMedicalCheckComponent implements OnInit {
 
   }
 
+  validateWeight(){
 
+    return this.medicalCheck.weight <= 0;
+  }
 }

@@ -18,7 +18,7 @@ import { RutaUpdateMedicalCheckComponent } from './rutas/ruta-update-medical-che
 import {
   ButtonModule,
   CalendarModule,
-  DropdownModule,
+  DropdownModule, GalleriaModule,
   InputTextareaModule,
   InputTextModule, MegaMenuModule, MessageService, MultiSelectModule, SliderModule,
   SplitButtonModule, TableModule, ToastModule
@@ -61,7 +61,8 @@ import {AuthService} from "./services/auth/auth.service";
     SliderModule,
     MultiSelectModule,
     HttpClientModule,
-    ToastModule
+    ToastModule,
+    GalleriaModule
 
   ],
   providers: [

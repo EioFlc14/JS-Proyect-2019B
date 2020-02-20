@@ -65,9 +65,6 @@ export class RutaManageMedicalCheckComponent implements OnInit {
     );
   }
 
-  update(medicalCheck) {
-
-  }
 
   delete(id) {
     const eliminar$ = this._medicalCheck.delete(id);

@@ -44,9 +44,9 @@
         <a [routerLink]="['/login','principal', 'updatePatient',patient.user_roles.id]" >
           <button pButton type="button" class="ui-button-success" icon="pi pi-pencil" style="margin-right: .5em;"></button>
         </a>
-        <div *ngIf="_authService.deletePatient">
-          <button pButton type="button" class="ui-button-danger" icon="pi pi-trash" style="margin-right: .5em;" (click)="delete(patient.user_roles.id)" ></button>
-        </div>
+<!--        <div *ngIf="_authService.deletePatient">-->
+<!--          <button pButton type="button" class="ui-button-danger" icon="pi pi-trash" style="margin-right: .5em;" (click)="delete(patient.user_roles.id)" ></button>-->
+<!--        </div>-->
       </td>
     </tr>
   </ng-template>

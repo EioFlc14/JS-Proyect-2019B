@@ -11,5 +11,6 @@ EN CASO DE TENER TIEMPO:
 
 EXAMEN
 
-	- No controlar lo de las referencias al eliminar (toca ver las formas de eliminar cuando tiene registros en detcabecera)
-	- crud de usuario sin importar el rol
+(No se hace) Eliminar Jugadores (bien cuando no estàn en ninguna compra)
+
+(No se hace) Eliminar cabecera de carrito y eliminar detalle carrito 

@@ -30,7 +30,12 @@ export class RutaGestionarJugadorComponent implements OnInit {
     jugadores$
       .subscribe(
         (jg : any[])=>{
-          this.jugadores = jg;
+          for (let i = 0; i < jg.length; i++) {
+            if(jg[i].equipo != null){
+              this.jugadores.push(jg[i]);
+            }
+          }
+
           console.log('Jugadores:', this.jugadores);
         },
         ()=>{
@@ -62,7 +67,26 @@ export class RutaGestionarJugadorComponent implements OnInit {
   }
 
   eliminar(id){
+    const eliminarJugador$ = this._jugadorService.eliminar(id);
 
+    eliminarJugador$
+      .subscribe(
+        ()=>{
+
+          const indice = this.jugadores.findIndex(
+            (jug) => {
+              return jug.id === id;
+            }
+          );
+
+          this.jugadores.splice(indice, 1);
+          this.messageService.add({key: 'myKey1', severity: 'success', summary: 'Jugador Eliminado'});
+
+        },
+        ()=> {
+          this.messageService.add({key: 'myKey1', severity: 'error', summary: 'Error al eliminar jugador'});
+        }
+      );
   }
 
 }

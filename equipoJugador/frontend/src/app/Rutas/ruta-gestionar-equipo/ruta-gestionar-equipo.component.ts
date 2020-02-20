@@ -63,7 +63,16 @@ export class RutaGestionarEquipoComponent implements OnInit {
     eliminarEquipo$
       .subscribe(
         ()=>{
+
+          const indice = this.equipos.findIndex(
+            (eq) => {
+              return eq.id === id;
+            }
+          );
+
+          this.equipos.splice(indice, 1);
           this.messageService.add({key: 'myKey1', severity: 'success', summary: 'Equipo Eliminado'});
+
         },
         ()=> {
           this.messageService.add({key: 'myKey1', severity: 'error', summary: 'Error al eliminar equipo'});
@@ -71,5 +80,7 @@ export class RutaGestionarEquipoComponent implements OnInit {
       );
 
   }
+
+
 
 }
