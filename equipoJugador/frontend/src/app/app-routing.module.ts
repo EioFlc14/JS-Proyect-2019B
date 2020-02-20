@@ -11,6 +11,9 @@ import {RutaActualizarJugadorComponent} from "./Rutas/ruta-actualizar-jugador/ru
 import {RutaAddCarritoComponent} from "./Rutas/ruta-add-carrito/ruta-add-carrito.component";
 import {RutaActualizarCarritoComponent} from "./Rutas/ruta-actualizar-carrito/ruta-actualizar-carrito.component";
 import {RutaGestionarCarritoComponent} from "./Rutas/ruta-gestionar-carrito/ruta-gestionar-carrito.component";
+import {RutaAddUsuarioComponent} from "./Rutas/ruta-add-usuario/ruta-add-usuario.component";
+import {RutaActualizarUsuarioComponent} from "./Rutas/ruta-actualizar-usuario/ruta-actualizar-usuario.component";
+import {RutaGestionarUsuarioComponent} from "./Rutas/ruta-gestionar-usuario/ruta-gestionar-usuario.component";
 
 
 const routes: Routes = [
@@ -87,7 +90,20 @@ const routes: Routes = [
         // canActivate: [
         //   UpdateMedicalCheckPolicy,
         // ],
+      },
+      {
+        path: 'addUsuario',
+        component: RutaAddUsuarioComponent,
+      },
+      {
+        path: 'actualizarUsuario/:idUsuario',
+        component: RutaActualizarUsuarioComponent
+      },
+      {
+        path: 'gestionarUsuario',
+        component: RutaGestionarUsuarioComponent
       }
+
     ]
   }
 

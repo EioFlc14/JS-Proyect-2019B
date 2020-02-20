@@ -1,0 +1,129 @@
+<div class="ui-fluid">
+
+  <h1 style="text-align: center; color: firebrick "> CREAR USUARIO </h1>
+  <form #usuarioForm="ngForm" >
+    <div class="ui-g-12 ui-md-3"></div>
+
+    <div class="ui-g-12 ui-md-6">
+
+      <div class="ui-g-12 ui-md-12">
+        <div class="ui-g-4">
+          Nombre:
+        </div>
+        <div class="ui-g-8">
+          <input pInputText type="text" name="nombre" pattern="[a-zA-ZÀ-ÿ\u00f1\u00d1]{1}[a-zA-ZÀ-ÿ\u00f1\u00d1\s]*"
+                 [(ngModel)]="usuario.nombre" #nombreInput="ngModel" required />
+        </div>
+      </div>
+
+      <div *ngIf="nombreInput.touched && nombreInput.dirty">
+        <p *ngIf="nombreInput.errors?.required " style="color: red">
+          This field is required.
+        </p>
+
+        <p *ngIf="nombreInput.errors?.pattern" style="color: red">
+          Letters Field.
+        </p>
+
+      </div>
+
+      <div class="ui-g-12 ui-md-12">
+        <div class="ui-g-4">
+          Apellido:
+        </div>
+        <div class="ui-g-8">
+          <input pInputText type="text" name="apellido" pattern="[a-zA-ZÀ-ÿ\u00f1\u00d1]{1}[a-zA-ZÀ-ÿ\u00f1\u00d1\s]*"
+                 [(ngModel)]="usuario.apellido" #apellidoInput="ngModel" required />
+        </div>
+      </div>
+
+      <div *ngIf="apellidoInput.touched && apellidoInput.dirty">
+        <p *ngIf="apellidoInput.errors?.required " style="color: red">
+          This field is required.
+        </p>
+
+        <p *ngIf="apellidoInput.errors?.pattern" style="color: red">
+          Letters Field.
+        </p>
+
+      </div>
+
+
+      <div class="ui-g-12 ui-md-12">
+        <div class="ui-g-4">
+          Username:
+        </div>
+        <div class="ui-g-8">
+          <input pInputText type="text" name="username" minlength="5" [(ngModel)]="usuario.username" #usernameInput="ngModel" required />
+        </div>
+      </div>
+
+      <div *ngIf="usernameInput.touched && usernameInput.dirty">
+        <p *ngIf="usernameInput.errors?.required " style="color: red">
+          This field is required.
+        </p>
+
+        <p *ngIf="usernameInput.errors?.minlength " style="color: red">
+          Debe ser mayor que 5 caracteres alfanuméricos.
+        </p>
+
+      </div>
+
+
+      <div class="ui-g-12 ui-md-12">
+        <div class="ui-g-4">
+          Password:
+        </div>
+        <div class="ui-g-8">
+          <input pInputText type="password" name="password" minlength="5" [(ngModel)]="usuario.password" #passwordInput="ngModel" required />
+        </div>
+      </div>
+
+      <div *ngIf="passwordInput.touched && passwordInput.dirty">
+        <p *ngIf="passwordInput.errors?.required " style="color: red">
+          This field is required.
+        </p>
+
+        <p *ngIf="passwordInput.errors?.minlength " style="color: red">
+          Debe ser mayor que 5 caracteres alfanuméricos.
+        </p>
+
+      </div>
+
+      <div class="ui-g-12 ui-md-12">
+        <div class="ui-g-4">
+          Rol:
+        </div>
+        <div class="ui-g-8">
+          <p-dropdown [options]="roles" name="rol" [(ngModel)]="selectedRol" optionLabel="nombre" required #rolInput="ngModel" ></p-dropdown>
+        </div>
+      </div>
+
+      <div *ngIf="rolInput.touched && rolInput.dirty">
+        <p *ngIf="rolInput.errors?.required " style="color: red">
+          This field is required.
+        </p>
+
+      </div>
+
+
+      <div class="ui-g-12 ui-md-12">
+        <div class="ui-g-12">
+          <button pButton name="addButton" label="CREAR" type="button" style="background-color: firebrick" [disabled]="!usuarioForm.valid"  (click)="crear()" > </button>
+        </div>
+      </div>
+
+
+
+      <p-toast key="myKey1" position="bottom-left"  ></p-toast>
+
+
+
+
+
+    </div>
+
+    <div class="ui-g-12 ui-md-3"></div>
+  </form>
+</div>
+

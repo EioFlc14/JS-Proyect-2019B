@@ -56,6 +56,16 @@ export class RutaPrincipalComponent implements OnInit {
             }
           ]
         ]
+      },
+      {
+        label: 'Usuario', icon: 'fa fa-fw fa-check',
+        items: [
+          [
+            {
+              items: [{label: 'Crear Usuario', routerLink: ['addUsuario']},{label: 'Gestionar Usuarios', routerLink: ['gestionarUsuario']}]
+            }
+          ]
+        ]
       }
 
     ];

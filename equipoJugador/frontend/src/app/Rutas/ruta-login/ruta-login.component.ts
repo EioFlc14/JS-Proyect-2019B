@@ -36,12 +36,12 @@ export class RutaLoginComponent implements OnInit {
 
             console.log('data sesion:', this._authService.dataSesion);
 
-            if (this._authService.dataSesion.rol === "administrador") {
+            if (this._authService.dataSesion.rol === "Administrador") {
 
 
 
             } else {
-              if (this._authService.dataSesion.rol === "usuario") {
+              if (this._authService.dataSesion.rol === "Usuario") {
 
 
 
@@ -50,7 +50,7 @@ export class RutaLoginComponent implements OnInit {
 
            // this.router.navigate(['login/principal']);
           } else {
-            this.messageService.add({key: 'myKey1', severity: 'error', summary: 'Unregistered User'});
+            this.messageService.add({key: 'myKey1', severity: 'error', summary: 'Usuario No Registrado'});
           }
         },
         (error) => {

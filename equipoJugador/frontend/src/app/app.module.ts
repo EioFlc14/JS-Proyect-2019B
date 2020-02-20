@@ -27,6 +27,9 @@ import {FormsModule} from "@angular/forms";
 import {AuthService} from "./Services/auth/auth.services";
 import {HttpClientModule} from "@angular/common/http";
 import { RutaGestionarCarritoComponent } from './Rutas/ruta-gestionar-carrito/ruta-gestionar-carrito.component';
+import { RutaAddUsuarioComponent } from './Rutas/ruta-add-usuario/ruta-add-usuario.component';
+import { RutaActualizarUsuarioComponent } from './Rutas/ruta-actualizar-usuario/ruta-actualizar-usuario.component';
+import { RutaGestionarUsuarioComponent } from './Rutas/ruta-gestionar-usuario/ruta-gestionar-usuario.component';
 
 
 
@@ -43,7 +46,10 @@ import { RutaGestionarCarritoComponent } from './Rutas/ruta-gestionar-carrito/ru
     RutaAddCarritoComponent,
     RutaGestionarEquipoComponent,
     RutaGestionarJugadorComponent,
-    RutaGestionarCarritoComponent
+    RutaGestionarCarritoComponent,
+    RutaAddUsuarioComponent,
+    RutaActualizarUsuarioComponent,
+    RutaGestionarUsuarioComponent
   ],
   imports: [
     BrowserModule,
