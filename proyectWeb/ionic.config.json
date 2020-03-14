@@ -1,7 +1,0 @@
-{
-  "name": "proyectWeb",
-  "integrations": {
-    "cordova": {}
-  },
-  "type": "angular"
-}
